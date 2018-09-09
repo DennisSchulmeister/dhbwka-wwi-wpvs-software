@@ -22,7 +22,7 @@ Screenshots erklärt. Dabei werden auch die notwendigen Einstellungen und
 die benötigten Plugins für Atom und Netbeans beschrieben.
 
 Die Anleitung kann an folgender Stelle online betrachtet werden:
-https://www.wpvs.de/wpvs-software/
+https://www.wpvs.de/software/
 
 Copyright
 ---------

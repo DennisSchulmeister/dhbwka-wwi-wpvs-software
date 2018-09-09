@@ -32,13 +32,50 @@
  * andere Rechte wie Persönlichkeits- und Datenschutzrechte zu beachten
  * sein, die Ihre Nutzung des Materials entsprechend beschränken.
  */
-"use strict";
 
-import MiniTutorial from "mini-tutorial.js";
-import mtTheme from "mini-tutorial.js/themes/white.css";
-import stylesheet from "./index.css";
+/** Screenshot images, duh! **/
+.screenshot {
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+}
 
-window.addEventListener("load", () => {
-    let mt = new MiniTutorial();
-    mt.start();
-});
+@media print {
+    .screenshot {
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+/** Big skip between steps **/
+.skip {
+    margin-bottom: 2em;
+}
+
+/** Filename **/
+.fn {
+    font-family: 'Roboto Mono', monospace;
+    color: darkgreen;
+}
+
+/** Command **/
+.cmd {
+    font-family: 'Roboto Mono', monospace;
+    color: darkblue;
+}
+
+/** Screen text **/
+.scr {
+    font-family: 'Roboto Mono', monospace;
+    color: darkred;
+}
+
+/** Keyboard Command **/
+kbd {
+    font-family: 'Roboto Mono', monospace;
+    background-color: rgb(240, 240, 240);
+    color: rgb(47, 47, 47);
+    padding: 0 0.2em 0 0.2em;
+    border-radius: 0.2em;
+    border: 1px solid black;
+}
