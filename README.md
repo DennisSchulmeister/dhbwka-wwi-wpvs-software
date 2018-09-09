@@ -1,5 +1,7 @@
-Installation der benötigten Software für Webprogrammierung und Verteilte Systeme im Studiengang Wirtschaftsinformatik an der DHBW Karlsruhe
-===========================================================================================================================================
+Installation der benötigten Software
+====================================
+
+für Webprogrammierung und Verteilte Systeme im Studiengang Wirtschaftsinformatik an der DHBW Karlsruhe
 
 Kurzbeschreibung
 ----------------
@@ -9,11 +11,11 @@ erstellte Anleitung, die die Installation der für die beiden Vorlesungen
 Webprogrammierung und Verteilte Systeme im Studiengang Wirtschaftsinformatik
 an der DHBW Karlsruhe benötigten Software erklärt.
 
- * Atom: https://atom.io/
- * Git: https://git-scm.com/
- * node.js: https://nodejs.org/
- * Netbeans: http://netbeans.apache.org/
- * GlassFish: https://javaee.github.io/glassfish/
+ * [Atom](https://atom.io/)
+ * [Git](https://git-scm.com/)
+ * [node.js](https://nodejs.org/)
+ * [Netbeans](http://netbeans.apache.org/)
+ * [GlassFish](https://javaee.github.io/glassfish/)
 
 Die Installation aller Komponenten wird Schritt für Schritt mit vielen
 Screenshots erklärt. Dabei werden auch die notwendigen Einstellungen und
