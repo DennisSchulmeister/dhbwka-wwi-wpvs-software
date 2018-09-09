@@ -1,35 +1,34 @@
 Installation der benötigten Software für Webprogrammierung und Verteilte Systeme im Studiengang Wirtschaftsinformatik an der DHBW Karlsruhe
 ===========================================================================================================================================
 
-Getting Started
----------------
+Kurzbeschreibung
+----------------
 
-This is the recommended project structure for a `mini-tutorial.js` document.
-Simply download this repository and start hacking it. It couldn't be easier. :-)
+Dies ist eine mit [mini-tutorial.js](https://github.com/DennisSchulmeister/mini-tutorial.js)
+erstellte Anleitung, die die Installation der für die beiden Vorlesungen
+Webprogrammierung und Verteilte Systeme im Studiengang Wirtschaftsinformatik
+an der DHBW Karlsruhe benötigten Software erklärt.
 
- * Download this repository (__Clone or download » Download ZIP__)
- * Extract anywhere on your computer
- * Install needed packages
- * Hack away
+ * Atom: https://atom.io/
+ * Git: https://git-scm.com/
+ * node.js: https://nodejs.org/
+ * Netbeans: http://netbeans.apache.org/
+ * GlassFish: https://javaee.github.io/glassfish/
 
-Use the following commands while working on a document:
+Die Installation aller Komponenten wird Schritt für Schritt mit vielen
+Screenshots erklärt. Dabei werden auch die notwendigen Einstellungen und
+die benötigten Plugins für Atom und Netbeans beschrieben.
 
- * `npm install` to install all dependencies
- * `npm run start` to open a browser for a live preview
- * `npm run build` to build a static version for uploading on a webserver
- * `npm run watch` to rebuild after each change without starting a local server
- * `npm run clean` to just clean the dist directory
-
-The project may contain as many documents as you like. Each one of them is
-just a HTML file in the `src` directory. See `src/index.html` for an example.
+Die Anleitung kann an folgender Stelle online betrachtet werden:
+https://www.wpvs.de/wpvs-software/
 
 Copyright
 ---------
 
-`mini-tutorial.js` uses the Affero GPL 3. This example however uses a
-3-clause BSD license, because you may not want to use the GPL on your documents.
-:-) Well if you do, hat off to you, but of course you don't have to.
+Dieses Projekt ist lizenziert unter
+[_Creative Commons Namensnennung 4.0 International_](http://creativecommons.org/licenses/by/4.0/)
 
-mini-tutorial.js (https://www.github.com/DennisSchulmeister/mini-tutorial.js) <br/>
-This template: (https://www.github.com/DennisSchulmeister/mt-template) <br/>
-© 2018 Dennis Schulmeister-Zimolong <dennis@pingu-mail.de>
+© 2018 Dennis Schulmeister-Zimolong <br/>
+
+E-Mail: [dhbw@windows3.de](mailto:dhbw@windows3.de) <br/>
+Webseite: https://www.wpvs.de
