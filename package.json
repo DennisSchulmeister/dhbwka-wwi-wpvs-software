@@ -1,17 +1,17 @@
 {
-    "name": "mt-template",
+    "name": "dhbwka-wwi-wpvs-software",
     "version": "1.0.1",
-    "description": "mini-tutorial.js template project",
+    "description": "Installation der benötigten Software für Webprogrammierung und Verteilte Systeme",
     "author": "Dennis Schulmeister-Zimolong",
     "license": "BSD-3-Clause",
-    "homepage": "https://github.com/DennisSchulmeister/mt-template",
+    "homepage": "https://github.com/DennisSchulmeister/dhbwka-wwi-wpvs-software",
     "bugs": {
-        "url": "https://github.com/DennisSchulmeister/mt-template/issues"
+        "url": "https://github.com/DennisSchulmeister/dhbwka-wwi-wpvs-software/issues"
     },
     "main": "index.js",
     "repository": {
         "type": "git",
-        "url": "git+ssh://git@github.com/DennisSchulmeister/mt-template.git"
+        "url": "git+ssh://git@github.com/DennisSchulmeister/dhbwka-wwi-wpvs-software.git"
     },
     "keywords": [
         "mini-tutorial.js",
