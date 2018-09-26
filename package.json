@@ -26,7 +26,7 @@
         "start": "parcel src/index.html --open"
     },
     "devDependencies": {
-        "mini-tutorial.js": "^1.0.0",
+        "mini-tutorial.js": "^1.0.6",
         "parcel-bundler": "^1.9.7",
         "shelljs": "^0.7.8"
     }

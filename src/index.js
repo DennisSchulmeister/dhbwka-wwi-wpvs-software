@@ -36,6 +36,7 @@
 
 import MiniTutorial from "mini-tutorial.js";
 import mtTheme from "mini-tutorial.js/themes/white.css";
+import mtCommonCSS from "mini-tutorial.js/themes/common.css";
 import stylesheet from "./index.css";
 
 window.addEventListener("load", () => {
