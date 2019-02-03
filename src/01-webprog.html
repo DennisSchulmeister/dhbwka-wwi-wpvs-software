@@ -1,0 +1,916 @@
+<!-- ============================== -->
+<!-- 3. Semester: Webprogrammierung -->
+<!-- ============================== -->
+<section data-chapter data-title="3. Semester: Webprogrammierung"></section>
+
+<!-- –––––––––––––––––––––––– -->
+<!-- Was benötigen wir alles? -->
+<!-- –––––––––––––––––––––––– -->
+<section data-title="Was benötigen wir alles?">
+    <p>
+        Im dritten Semester nähern wir uns nun immer mehr der professionellen
+        Softwareentwicklung an. In der Vorlesung setzen wir daher von Anfang an
+        auf die richtigen Werkzeuge, um unsere Projekte so praxisnah wie möglich
+        aufzuziehen. Insgesamt benötigen wir deshalb folgende Programme:
+    </p>
+    <ul>
+        <li>
+            Git
+        </li>
+        <li>
+            node.js
+        </li>
+        <li>
+            Atom
+        </li>
+        <li>
+            Java Development Kit
+        </li>
+        <li>
+            Apache NetBeans
+        </li>
+        <li>
+            Apache TomEE
+        </li>
+        <li>
+            Apache Derby
+        </li>
+    </ul>
+    <p>
+        Die Programme haben dabei folgende Funktion:
+    </p>
+
+    <h3>Git</h3>
+    <p>
+        Einst waren Compiler und Editor alles, was man zum Programmieren benötigte.
+        Doch je größer ein Projekt wird, desto schwieriger wird es, die Änderungen
+        am Quellcode nachvollziehbar zu dokumentieren, so dass schon früh spezielle
+        Werkzeuge hierfür entstanden sind. Git ist ein solches Werkzeug. es ermöglicht
+        uns darüber hinaus aber auch, mit mehreren Personen am selben Quellcode zu
+        arbeiten und diesen über das Internet zu teilen.
+    </p>
+
+    <h3>node.js</h3>
+    <p>
+        Bei node.js handelt es sich vereinfacht gesagt um eine JavaScript-Umgebung
+        außerhalb des Browsers. Ursprünglich entstanden, um auch den Serverteil einer
+        Webanwendung in JavaScript entwickeln zu können, nutzen es viele Entwickler
+        heutzutage auch im Frontend-Bereich, um fremde JavaScript-Bibliotheken in ihre
+        Anwendungen zu integrieren und Hilfsprogramme zur Bearbeitung des Quellcodes
+        auszuführen.
+    </p>
+
+    <h3>Atom</h3>
+    <p>
+        Microsoft und Apple sind leider bekannt dafür, ihren Betriebssystemen nicht einmal
+        einen auch nur ansatzweise für Programmierer geeigneten Editor beizulegen. In der
+        Vorlesung verwenden wir deshalb Atom, der von den Machern von GitHub speziell für
+        Webentwickler angeboten wird und sich entsprechend großer Beliebtheit erfreut.
+    </p>
+
+    <h3>Java Development Kit</h3>
+    <p>
+        Im Laufe der Vorlesung werden wir uns irgendwann auch der serverseitigen
+        Webprogrammierung zuwenden und dabei dann auf Java zurückkommen. Du benötigst
+        deshalb weiterhin eine aktuelle Version des Java Development Kit als Compiler
+        und Laufzeitumgebung auf deinem Rechner.
+    </p>
+
+    <h3>Apache NetBeans</h3>
+    <p>
+        Für die Programmierung in Java werden wir von Atom auf NetBeans umsteigen.
+        Zwar könnten wir auch hier Atom weiter verwenden, NetBeans bietet uns aber
+        einige Werkzeuge und Programmierhilfen speziell für Java, die es in Atom
+        nicht gibt. Es spielt in einer Liga mit Eclipse und InelliJ, ist im Vergleich
+        zu diesen aber deutlich einfacher zu bedienen.
+    </p>
+
+    <h3>Apache TomEE</h3>
+    <p>
+        TomEE ist ein so genannter Applikationsserver, der uns bei der Programmierung
+        auf Serverseite unterstützen wird. Er ist sozusagen der Webserver, innerhalb
+        dessen unsere Webanwendungen laufen werden. Neben Webanwendungen kann er noch
+        viel mehr, was wir uns aber erst nächstes Semester genauer anschauen werden.
+    </p>
+
+    <h3>Apache Derby</h3>
+    <p>
+        Serverseitig nutzen die meisten Webanwendungen eine (relationale) Datenbank,
+        um größere Datenmengen zu speichern und verwalten. Im dritten Semester werden
+        wir uns damit nur sehr oberflächlich beschäftigen. Einige unserer Beispiele
+        greifen hier aber schon dem vierten Semester voraus, so dass wir die Datenbank
+        an dieser Stelle gleich mit installieren.
+    </p>
+</section>
+
+<!-- –––––––––––––––––––––– -->
+<!-- Bevor es losgehen kann -->
+<!-- –––––––––––––––––––––– -->
+<section id="sec-start" data-title="Bevor es losgehen kann">
+    <p>
+        Nicht alle Entwicklungswerkzeuge, die wir in der Vorlesung verwenden, kommen mit
+        einer eigenen Installationsroutine. Viele Programme müssen einfach nur als ZIP-Datei
+        entpackt und dann aus dem jeweiligen Verzeichnis heraus gestartet werden. Sicher
+        hast du bereits ein Verzeichnis mit Vorlesungsunterlagen auf deinem Rechner. Dort
+        solltest du deshalb In dieser Variante kann NetBeansein weiteres Verzeichnis nur für die hier beschriebenen
+        Zusatzprogramme anlegen.
+    </p>
+    <p>
+        Einige Programme werden wir semesterübergreifend verwenden. Du solltest das Verzeichnis
+        deshalb außerhalb deiner üblichen Semester/Vorlesungsstruktur anlegen und einfach
+        <span class="fn">Software</span>, <span class="fn">Entwicklungswerkzeuge</span> oder
+        <span class="fn">Zusatzprogramme</span> nennen.
+    </p>
+    <figure>
+        <img src="img/vorbereitung/verzeichnis.png" />
+        <figcaption>
+            Hier kommen alle für die Vorlesungen benötigten Zusatzprogramme rein
+        </figcaption>
+    </figure>
+    <p>
+        Verzeichnis angelegt? Alles klar! Dann kann es jetzt los gehen.
+    </p>
+</section>
+
+<!-- –––––––––––––––––––– -->
+<!-- Installation von git -->
+<!-- –––––––––––––––––––– -->
+<section id="sec-git" data-title="Installation von Git">
+    <p>
+        <span class="nr">1)</span>
+        Besuche die Webseite <a href="https://git-scm.com/" target="_blank">https://git-scm.com/</a>
+        und lade dir das Installationspaket für dein Betriebssystem herunter.
+    </p>
+    <figure>
+        <img src="img/git/download.png" />
+        <figcaption>
+            Download von Git
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">2)</span>
+        Unter Windows heißt die Installationsdatei <span class="fn">Git-2.18.0-64-bit.exe</span>
+        oder ähnlich, wobei <span class="fn">2.18.0</span> die Versionsnummer ist und daher bei dir
+        abweichen kann. Starte die Datei, um die Installation zu beginnen. Während der Installation
+        wirst du gefragt, welche Komponenten installiert werden sollen. Du kannst die Vorauswahl
+        einfach übernehmen und auf weiter klicken.
+    </p>
+    <figure>
+        <img src="img/git/installation_1.png" />
+        <figcaption>
+            Auswahl der zu installierenden Komponenten
+        </figcaption>
+    </figure>
+    <p>
+        Im nächsten Schritt fragt das Setup, mit welchem Editor du deine Commit-Nachrichten erfassen willst.
+        Falls hier <span class="scr">Notepad++</span> zur Auswahl steht, solltest du es auswählen. Im Grunde
+        genommen ist es aber egal, da wir in der Vorlesung selten mit der Kommandozeile arbeiten werden.
+    </p>
+    <figure>
+        <img src="img/git/installation_2.png" />
+        <figcaption>
+            Auswahl des bevorzugten Editors zur Erfassung der Commit-Nachrichten
+        </figcaption>
+    </figure>
+    <p>
+        Da Git ursprünglich für die Entwicklung des Linux-Kernels entwickelt wurde, enthält die Installation
+        unter Windows eine Vielzahl von Kommandozeilenprogrammen aus der Unix-Welt. Linux- und mac-User haben
+        diese Programme bereits installiert, unter Windows fehlen sie jedoch in der Regel. Die Auswahl im
+        nächsten Schritt solltest daher auf <span class="scr">Use Git from the Windows Command Prompt</span>
+        stehen lassen.
+    </p>
+    <figure>
+        <img src="img/git/installation_3.png" />
+        <figcaption>
+            Auswahl der zu verwendenden Shell
+        </figcaption>
+    </figure>
+    <p>
+        Die nachfolgenden Fragen kannst du ebenfalls alle überspringen. Übernimm einfach die Voreinstellungen
+        und klicke dich solange durch, bis die Installation beginnt.
+    </p>
+    <figure>
+        <img src="img/git/installation_4.png" />
+        <figcaption>
+            Ab jetzt heißt es Warten …
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">3)</span>
+        Um die Installation zu testen, öffne ein Konsolenfenster. Am einfachsten geht dies über das Startmenü,
+        indem du dort den Befehl <span class="cmd">cmd</span> eintippst und ausführst.
+    </p>
+    <figure>
+        <img src="img/git/test_1.png" style="max-width: 25em;" />
+        <figcaption>
+            Start der Kommandozeile unter Windows
+        </figcaption>
+    </figure>
+    <p>
+        Gib innerhalb des Konsolenfensters den Befehl <span class="cmd">git</span> ein und bestätige ihn mit
+        <kbd>ENTER</kbd>. Wenn alles gut geht, solltest du dann den Hilfetext von Git angezeigt bekommen.
+    </p>
+    <figure>
+        <img src="img/git/test_2.png" />
+        <figcaption>
+            Anzeige des git-Hilfetexts innerhalb der Kommandozeile
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">4)</span>
+        An dieser Stelle solltest du dann gleich noch deinen Namen und deine E-Mailadresse in der Git-Konfiguration
+        hinterlegen. Somit kann Git die von dir vorgenommenen Änderungen an einem Quellcode auch wirklich dir zuordnen.
+        Gib daher folgende Befehle ein, wobei du <span class="scr">Max Mustermann</span> natürlich ersetzen musst:
+    </p>
+    <p class="cmd">
+        git config --global user.email "max@mustermann.de" <br />
+        git config --global user.name "Max Mustermann"
+    </p>
+
+    <p>
+        <span class="nr">5)</span>
+        Zum Schluss generieren wir noch die SSH-Schlüssel, mit denen du dich ohne Kennworteingabe später bei GitHub
+        authentifizieren kannst. Öffne hierfür das Startmenü und wähle folgenden Eintrag aus: <span class="scr">Git</span>
+        → <span class="scr">Git Bash</span>. Dadurch öffnet sich ein Konsolenfenster mit einer UNIX-artigen Konsole.
+        Dort musst du dann folgende Befehle eingeben, wobei du <span class="cmd">schulmeist</span> natürlich durch deinen
+        eigenen Anmeldenamen ersetzen musst. Diesen siehst du in der ersten Zeile vor dem <span class="scr">@</span>-Zeichen:
+    </p>
+    <p class="cmd">
+        mkdir /c/Users/schulmeist/.ssh <br />
+        ssh-keygen
+    </p>
+    <p>
+        Wenn <span class="cmd">ssh-keygen</span> nach dem Ablageort der neuen Schlüsseldatei fragt, gib dementsprechend
+        <span class="fn">/c/Users/dein-benutzername/.ssh/id_rsa</span> ein. Die anderen Fragen kannst mit <kbd>ENTER</kbd>
+        einfach bestätigen. Achte bei allen Eingaben aber auf die exakte Schreibweise!
+    </p>
+    <figure>
+        <img src="img/git/ssh.png" />
+        <figcaption>
+            Generieren des SSH-Schlüsselpaars für die sichere Authentifizierung bei GitHub
+        </figcaption>
+    </figure>
+    <p>
+        Anschließend kannst du das Fenster mit <span class="cmd">exit</span> beenden.
+    </p>
+</section>
+
+<!-- –––––––––––––––––––––––– -->
+<!-- Installation von node.js -->
+<!-- –––––––––––––––––––––––– -->
+<section id="sec-nodejs" data-title="Installation von node.js">
+    <p>
+        <span class="nr">1)</span>
+        Besuche die Webseite <a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a>
+        und lade dir das Installationspaket für dein Betriebssystem herunter.
+    </p>
+    <figure>
+        <img src="img/nodejs/download.png" />
+        <figcaption>
+            Downlaod von node.js
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">2)</span>
+        Unter Windows heißt die Installationsdatei <span class="fn">node-v8.11.4-x64.msi</span>,
+        wobei <span class="fn">8.11.4</span> die Versionsnummer ist und deshalb bei dir abweichen kann.
+        Führe die Datei aus, um die Installation zu starten. Die Fragen des Installationsassistenten
+        kannst du einfach durchklicken. Die Voreinstellungen sind alle in Ordnung.
+    </p>
+    <figure>
+        <img src="img/nodejs/installation.png" />
+        <figcaption>
+            Installation von node.js
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">3)</span>
+        Zum Testen der Installation öffnest du am Besten eine Kommandozeile. Dies geht ganz einfach im Startmenü,
+        indem du den Befehl <span class="cmd">cmd</span> eintippst und ausführst.
+    </p>
+    <figure>
+        <img src="img/nodejs/test_1.png" style="max-width: 25em;" />
+        <figcaption>
+            Start der Kommandozeile unter Windows
+        </figcaption>
+    </figure>
+    <p>
+        Gib dann den Befehl <span class="cmd">npm</span> ein und bestätige ihn mit <kbd>ENTER</kbd>.
+        Wenn alles gut geht, solltest du folgenden Hilfetext sehen:
+    </p>
+    <figure>
+        <img src="img/nodejs/test_2.png" />
+        <figcaption>
+            Anzeige des npm-Hilfetexts innerhalb der Kommandozeile
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">4)</span>
+        Sollte dabei der Hinweis erscheinen, dass bereits eine neuere Version von npm verfügbar ist,
+        kannst du diese mit dem Befehl <span class="cmd">npm install -G npm</span> installieren. Dabei
+        siehst du dann auch gleich den Node Package Manager, wofür die Abkürzung <span class="cmd">npm</span>
+        steht, im Einsatz. Der auf dem Bildschirm angezeigte Befehl <span class="cmd">npm i npm</span>
+        (i ist die Kurzform für install) ist an dieser Stelle ausnahmsweise nicht zu empfehlen, da er die
+        neue Version nicht systemweit installieren würde.
+    </p>
+</section>
+
+<!-- ––––––––––––––––––––– -->
+<!-- Installation von Atom -->
+<!-- ––––––––––––––––––––– -->
+<section id="sec-atom" data-title="Installation von Atom">
+    <p>
+        <span class="nr">1)</span>
+        Besuche die Webseite <a href="https://atom.io/" target="_blank">https://atom.io/</a>
+        und lade dir das Installationspaket für dein Betriebssystem herunter.
+    </p>
+    <figure>
+        <img src="img/atom/download.png" />
+        <figcaption>
+            Download von Atom
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">2)</span>
+        Unter Windows heißt die Installationsdatei <span class="fn">AtomSetup-x64.exe</span>.
+        Führe sie aus, um Atom zu installieren. Die Installation läuft dabei komplett automatisch ab.
+    </p>
+    <figure>
+        <img src="img/atom/installation.png" style="max-width: 25em;"/>
+        <figcaption>
+            Installation von Atom
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">3)</span>
+        Die ganzen Fragen beim ersten Programmstart kannst du alle wegklicken.
+    </p>
+    <figure>
+        <img src="img/atom/erster_start_1.png" />
+        <figcaption>
+            Ja, wir wollen <span class="scr">atom://</span>-URLS mit Atom öffnen
+        </figcaption>
+    </figure>
+    <figure>
+        <img src="img/atom/erster_start_2.png" />
+        <figcaption>
+            Ja, wir helfen gerne bei der Verbesserung des Editors
+        </figcaption>
+    </figure>
+    <figure>
+        <img src="img/atom/erster_start_3.png" />
+        <figcaption>
+            Nein, den Welcome Guide wollen wir jetzt nicht lesen
+        </figcaption>
+    </figure>
+    <figure>
+        <img src="img/atom/erster_start_4.png" />
+        <figcaption>
+            Und nein, die Willkommensseite hilft uns jetzt auch nicht weiter
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">4)</span>
+        Als nächstes installieren wir noch ein paar nützliche Plugins. Gehe hierfür auf
+        <span class="scr">File</span> → <span class="scr">Settings</span> → <span class="scr">Install</span>.
+        und installiere dort die folgenden Plugins:
+    </p>
+    <ul>
+        <li>
+            <span class="scr">git-plus</span>
+        </li>
+        <li>
+            <span class="scr">autoclose-html</span>
+        </li>
+    </ul>
+    <figure>
+        <img src="img/atom/plugins.png" />
+        <figcaption>
+            Suche und Installation von Plugins
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">5)</span>
+        Zusätzlich gibt es noch ein paar nützliche Einstellungen, wenn wir schon einmal hier sind. Klicke hierfür
+        im Settings-Tab auf <span class="scr">Editor</span> und ändere folgende Einstellungen:
+    </p>
+    <ul>
+        <li>
+            <span class="scr">Show Indent Guide</span>: Aktiviert
+        </li>
+        <li>
+            <span class="scr">Show Invisibles</span>: Aktiviert
+        </li>
+        <li>
+            <span class="scr">Tab Length</span>: 4
+        </li>
+    </ul>
+    <figure>
+        <img src="img/atom/settings.png" />
+        <figcaption>
+            Weitere Einstellungen für Atom
+        </figcaption>
+    </figure>
+</section>
+
+<!-- ––––––––––––––––––––––––––––––––––––– -->
+<!-- Installation des Java Development Kit -->
+<!-- ––––––––––––––––––––––––––––––––––––– -->
+<section id="sec-java" data-title="Installation des Java Development Kit">
+    <p>
+        <span class="nr">1)</span>
+        Besuche die Webseite <a href="https://jdk.java.net" target="_blank">https://jdk.java.net</a>
+        und lade die passende Version für dein Betriebssystem herunter.
+    </p>
+    <figure>
+        <img src="img/jdk/download.png" />
+        <figcaption>
+            Download des Java Development Kit
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">2)</span>
+        Unter Windows heißt die ZIP-Datei <span class="fn">openjdk-11.0.2_windows-x64_bin.zip</span>,
+        wobei <span class="fn">11.0.2</span> die Versionsnummer ist und daher bei dir abweichen kann.
+        Entpacke die Datei in dein neues Softwareverzeichnis für unsere Vorlesung.
+    </p>
+    <figure>
+        <img src="img/jdk/entpacken.png" />
+        <figcaption>
+            Entpacken des Java Development Kit
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">3)</span>
+        Öffne das neue Verzeichnis und kopiere den Pfad in die Zwischenablage. Achte dabei darauf,
+        dass es sich um das Verzeichnis handelt, indem sich die Unterverzeichnisse <span class="fn">bin</span>,
+        <span class="fn">conf</span>, <span class="fn">include</span> usw. befinden.
+    </p>
+    <figure>
+        <img src="img/jdk/pfad.png" />
+        <figcaption>
+            Kopieren des Pfads, indem sich das Java Development Kit befindet
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">4)</span>
+        Öffne das Startmenü und suche dort nach dem Begriff „Umgebungsvariablen”. In der Suche sollte
+        daraufhin der Menüpunkt <span class="scr">Umgebungsvariablen für dieses Konto bearbeiten</span>
+        erscheinen. Klicke ihn an.
+    </p>
+    <figure>
+        <img src="img/jdk/umgebungsvariablen_1.png" style="max-width: 25em;" />
+        <figcaption>
+            Öffnen des Konfigurationsfensters für Umgebungsvariablen
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">5)</span>
+        Klicke im oberen Bereich des Fensters auf <span class="scr">Neu…</span>, um eine neue Variable
+        mit dem Namen <span class="cmd">JAVA_HOME</span> anzulegen. Der Wert der Variable muss dem eben
+        kopierten Pfad entsprechen.
+    </p>
+    <figure>
+        <img src="img/jdk/umgebungsvariablen_2.png" />
+        <figcaption>
+            Anlage einer neuen Umgebungsvariable namens <span class="cmd">JAVA_HOME</span>
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">6)</span>
+        Anschließend bearbeite die Umgebungsvariable <span class="cmd">Path</span> und füge dort denselben
+        Pfad gefolgt von <span class="fn">\bin</span> ein.
+    </p>
+    <figure>
+        <img src="img/jdk/umgebungsvariablen_3.png" />
+        <figcaption>
+            Bearbeiten der Umgebungsvariable <span class="cmd">Path</span>
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">7)</span>
+        Zum Testen der Installation benötigen wir wieder eine Kommandozeile. Öffne deshalb das Startmenü
+        und gebe dort den Befehl <span class="cmd">cmd</span> ein.
+    </p>
+    <figure>
+        <img src="img/jdk/test_1.png" style="max-width: 25em;" />
+        <figcaption>
+            Start der Kommandozeile unter Windows
+        </figcaption>
+    </figure>
+    <p>
+        Gib dann den Befehl <span class="cmd">javac -version</span> ein und bestätige ihn mit <kbd>ENTER</kbd>.
+        Wenn alles gut geht, solltet die installierte Java-Version erscheinen.
+    </p>
+    <figure>
+        <img src="img/jdk/test_2.png" />
+        <figcaption>
+            Versionsanzeige des Java-Compilers
+        </figcaption>
+    </figure>
+</section>
+
+<!-- ––––––––––––––––––––––––––––––––––– -->
+<!-- Installation von NetBeans und Maven -->
+<!-- ––––––––––––––––––––––––––––––––––– -->
+<section id="sec-NetBeans" data-title="Installation von NetBeans und Maven">
+    <p>
+        <span class="nr">1)</span>
+        Besuche die Webseite <a href="https://NetBeans.apache.org" target="_blank">https://NetBeans.apache.org</a>
+        und lade das Binärpaket (nicht die Quellcode-Version) herunter.
+    </p>
+    <figure>
+        <img src="img/netbeans/download.png" />
+        <figcaption>
+            Download von NetBeans
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">2)</span>
+        Das ZIP-Archiv heißt derzeit <span class="fn">incubating-NetBeans-java-10.0-bin.zip</span>,
+        wobei <span class="fn">10.0</span> die Versionsnummer ist und daher bei dir abweichen kann.
+        Entpacke die Datei in dein neues Softwareverzeichnis für unsere Vorlesung.
+    </p>
+    <figure>
+        <img src="img/netbeans/entpacken.png" />
+        <figcaption>
+            Entpacken von NetBeans
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">3)</span>
+        Wechsle in das Unterverzeichnis <span class="fn">NetBeans\bin</span> und versuche NetBeans
+        per Doppelklick auf <span class="fn">NetBeans64.exe</span> zu starten. Unter macOS und Linux
+        musst du stattdessen die Datei <span class="fn">NetBeans</span> ohne eigene Dateiendung ausführen.
+    </p>
+    <figure>
+        <img src="img/netbeans/start.png" />
+        <figcaption>
+            EXE-Datei zum Starten von NetBeans unter Windows
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">4)</span>
+        Falls nach einer kurzen Weile die folgende Warnung erscheint, klicke auf
+        <span class="scr">Disable Modules and Continue</span>.
+    </p>
+    <figure>
+        <img src="img/netbeans/warnung.png" />
+        <figcaption>
+            Warnung wegen einem fehlenden Modul
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">5)</span>
+        Wenn du willst, kannst du beim ersten Start der Sendung anonymisierter Nutzungsdaten zur
+        Verbesserung von NetBeans zustimmen.
+    </p>
+    <figure>
+        <img src="img/netbeans/statistik.png" />
+        <figcaption>
+            Frage nach der Zustimmung zur Auswertung anonymisierter Nutzungsdaten
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">6)</span>
+        Links sollten drei Tabreiter namens <span class="scr">Projects</span>, <span class="scr">Files</span>
+        und <span class="scr">Services</span> erscheinen. Falls nicht, öffne Sie über das <span class="scr">Window</span>-Menü.
+    </p>
+    <figure>
+        <img src="img/netbeans/tabreiter.png" />
+        <figcaption>
+            Mit den drei Tabreitern <span class="scr">Projects</span>, <span class="scr">Files</span>
+            und <span class="scr">Services</span> werden wir häufig arbeiten
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">7)</span>
+        In dieser Variante bietet NetBeans bereits viele Funktion. Es fehlen allerdings noch die Erweiterungen für Jakarta EE, die
+        wir erst in Form weiterer Plugins nachinstallieren müssen. Wähle hierfür den Menüeintrag <span class="scr">Tools</span> →
+        <span class="scr">Plugins</span> aus, wechsele dort auf den Reiter <span class="scr">Settings</span> und setze das fehlende
+        Häkchen bei <span class="scr">NetBeans 8.2 Plugin Portal<span class="scr">.
+    </p>
+    <figure>
+        <img src="img/netbeans/plugins_1.png" />
+        <figcaption>
+            Aktivierung des zusätzlichen Plugin-Repositories für Jakarta EE
+        </figcaption>
+    </figure>
+    <p>
+        <span class="nr">8)</span>
+        Anschließend wechsle auf den Reiter <span class="scr">Available Plugins</span> und klicke dort auf
+        <span class="scr">Check for Newest</span>, um die Liste der verfügbaren Plugins zu aktualisieren.
+        Danach installiere die folgenden Plugins:
+    </p>
+    <ul>
+        <li class="scr">
+            SOAP Web Services
+        </li>
+        <li class="scr">
+            EJB and EAR
+        </li>
+        <li class="scr">
+            RESTful Web Services
+        </li>
+        <li class="scr">
+            Java EE Base
+        </li>
+        <li class="scr">
+            Oracle JS Parser Implementation
+        </li>
+    </ul>
+    <figure>
+        <img src="img/netbeans/plugins_2.png" />
+        <figcaption>
+            Auswahl der zu installierenden Plugins
+        </figcaption>
+    </figure>
+    <p>
+        Eine kurze Weile später will NetBeans dann neugestartet werden. Bestätige die Frage und warte,
+        bis NetBeans wieder verfügbar ist.
+    </p>
+
+    <p>
+        <span class="nr">9)</span>
+        Die Rechtschreibprüfung von NetBeans kennt leider nur Englisch, die Beispiele und Aufgaben in
+        Moodle sind aber alle auf deutsch kommentiert. Auf Moodle haben wir deshalb ein deutsches Wörterbuch
+        hochgeladen, dass du herunterladen kannst.
+    </p>
+    <figure>
+        <img src="img/netbeans/spellcheck_1.png" />
+        <figcaption>
+            Download des deutschen Wörterbuchs
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">10)</span>
+        Entpacke das ZIP-Archiv in das Softwareverzeichnis für unsere Vorlesung.
+    </p>
+    <figure>
+        <img src="img/netbeans/spellcheck_2.png" />
+        <figcaption>
+            Entpacken des deutschen Wörterbuchs
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">11)</span>
+        Wähle in NetBeans den Menüeintrag <span class="scr">Tools</span> → <span class="scr">Options</span>
+        aus und wechsle dort auf die Seite <span class="scr">Editor</span> → <span class="scr">Spellchecker</span>.
+        Klicke dort auf <span class="scr">Add…</span>, um ein neues Wörterbuch hinzuzufügen. Gib dabei folgende
+        Werte ein:
+    </p>
+    <ul>
+        <li>
+            <span class="scr">Dictionary File:</span> Die eben entpackte Wörterbuchdatei <span class="fn">german.dic</span>
+        </li>
+        <li>
+            <span class="scr">Dictionary Locale:</span> <span class="cmd">de</span>
+        </li>
+    </ul>
+    <figure>
+        <img src="img/netbeans/spellcheck_3.png" />
+        <figcaption>
+            Hinzufügen des deutschen Wörterbuchs
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">12)</span>
+        Zum Schluss wollen wir noch sichergehen, dass du maven-basierte Webprojekte in NetBeans erstellen kannst.
+        Wähle hierfür im Menü den Eintrag <span class="scr">Tools</span> → <span class="scr">Options</span> aus
+        und öffne dann die Seite <span class="scr">Java</span> → <span class="scr">Maven</span>. Es dauert dann
+        eine Weile, bis sich das Fenster kurz schließt und wieder öffnet und dadurch Maven aktiviert wurde.
+        Du kannst das Fenster dann gleich mit <span class="scr">OK</span> wieder schließen.
+    </p>
+    <p>
+        Zum Test, ob Maven nun vollständig eingerichtet wurde, gehe auf <span class="scr">File</span> → <span class="scr">New Project…</span>
+        und prüfe, ob in der Kategorie <span class="scr">Maven</span> der Eintrag <span class="scr">Web Application</span> erscheint.
+        Eventuell taucht der Eintrag dabei nicht von Anfang an auf, nach einer Weile sollte er aber irgendwann hier zur Verfügung stehen.
+    </p>
+    <figure>
+        <img src="img/netbeans/maven_webapp.png" />
+        <figcaption>
+            Wenn es so aussieht, ist alles in Ordnung.
+        </figcaption>
+    </figure>
+</section>
+
+<!-- –––––––––––––––––––––––––––––––– -->
+<!-- Installation von TomEE und Derby -->
+<!-- –––––––––––––––––––––––––––––––– -->
+<section id="sec-tomee" data-title="Installation von TomEE und Derby">
+    <p>
+        <span class="nr">1)</span>
+        Auf Moodle haben wir die eine vorkonfigurierte Version von Apache TomEE und Apache Derby zur Verfügung gestellt.
+        Lade das ZIP-Archiv auf deinen Rechner runter.
+    </p>
+    <figure>
+        <img src="img/tomee/download.png" />
+        <figcaption>
+            Download von TomEE und Derby
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">2)</span>
+        Das ZIP-Archiv heißt schlicht <span class="fn">TomEE und Derby.zip</span>. Entpacke es das Softwareverzeichnis für
+        unsere Vorlesung. Dabei sollten die drei Verzeichnisse <span class="fn">apache-tomee-plume-8.0.0-M1</span>,
+        <span class="fn">db-derby-10.14.2.0-bin</span> und <span class="fn">Datenbankinhalt</span> entstehen.
+        Die exakten Versionsnummern können natürlich abweichen.
+    </p>
+    <figure>
+        <img src="img/tomee/entpacken_1.png" />
+        <figcaption>
+            Entpacken von TomEE und Derby
+        </figcaption>
+    </figure>
+    <figure>
+        <img src="img/tomee/entpacken_2.png" />
+        <figcaption>
+            So sollte das Ergebnis aussehen
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">3)</span>
+        Zunächst wollen wir die Datenbank einrichten. Wechsle daher in NetBeans auf den Reiter <span class="scr">Services</span> und
+        öffne dort das Kontextmenü zum Eintrag <span class="scr">Databases</span> → <span class="scr">Java DB</span> (Rechtsklick).
+        Innerhalb des Menüs gehe dann auf <span class="scr">Properties…</span>.
+    </p>
+    <figure>
+        <img src="img/tomee/derby_config_1.png" />
+        <figcaption>
+            Öffnen der Derby-Konfiguration in NetBeans
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">4)</span>
+        Wähle folgende, eben entpackte Verzeichnisse in dem Fenster aus und bestätige dann mit <span class="scr">OK</span>.
+    </p>
+    <ul>
+        <li>
+            <span class="scr">Java DB Installation:</span> <span class="fn">apache-tomee-plume-8.0.0-M1</span>
+        </li>
+        <li>
+            <span class="scr">Database Location:</span> <span class="fn">Datenbankinhalt</span>
+        </li>
+    </ul>
+    <figure>
+        <img src="img/tomee/derby_config_2.png" />
+        <figcaption>
+            Konfiguration der Datenbankverzeichnisse in NetBeans
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">5)</span>
+        Durch die eben vorgenommene Konfiguration sollte ein neuer Eintrag namens <span class="scr">jdbc:derby://localhost:1527/sample</span>
+        im Ordner <span class="scr">Databases</span> erscheinen. Klicke ihn mit der rechten Maustaste an und gehe dann auf <span class="scr">Connect…</span>,
+        um die Datenbank zu starten. Daraufhin sollten innerhalb des Ordners weitere Einträge mit den Schemas und Tabellen der Datenbank auftauchen.
+        <b>Diesen Schritt musst du nun immer ausführen, wenn du eine Datenbankanwendung mit NetBeans entwickeln willst.</b>
+    </p>
+    <figure>
+        <img src="img/tomee/derby_config_3.png" />
+        <figcaption>
+            Alles in Ordnung, die Datenbank läuft
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">6)</span>
+        Weiter geht es mit dem Applikationsserver. Öffner hierfür weiterhin im Reiter <span class="scr">Services</span> des Kontextmenü zum
+        Eintrag <span class="scr">Servers</span> und gehe dort auf <span class="scr">Add Server…</span>. Im darauf folgenden Fenster wähle
+        den Eintrag <span class="scr">Apache Tomcat or TomEE</span> aus und klicke auf <span class="scr">Next</span>.
+    </p>
+    <figure>
+        <img src="img/tomee/nb_server_1.png" />
+        <figcaption>
+            Hinzufügen eines Tomcot- oder TomEE-Servers zu NetBeans
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">7)</span>
+        Gib im nächsten Schritt nun folgende Werte ein und schließe des Fenster dann mit <span class="scr">Finish</span>.
+        Benutzername und Passwort kannst du frei wählen. Der Einfachheit halber nehmen wir hier <span class="cmd">admin</span>
+        und <span class="cmd">admin</span>.
+    </p>
+    <ul>
+        <li>
+            <span class="scr">Server Location:</span> Das eben entpackte Verzeichnis <span class="fn">apache-tomee-plume-8.0.0-M1</span>
+        </li>
+        <li>
+            <span class="scr">Username:</span> <span class="cmd">admin</span>
+        </li>
+        <li>
+            <span class="scr">Password:</span> <span class="cmd">admin</span>
+        </li>
+    </ul>
+    <figure>
+        <img src="img/tomee/nb_server_2.png" />
+        <figcaption>
+            Installationspfad und Zugangsdaten des TomEE-Servers
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">8)</span>
+        Falls der neue Server nicht nach wenigen Sekunden im Ordner <span class="scr">Servers</span> zu sehen ist,
+        wähle den Menüpunkt <span class="scr">Tools</span> → <span class="scr">Options</span> aus und setze dort
+        den Radiobutton bei <span class="scr">No Proxy</span>. Anschließend musst du NetBeans neustarten.
+    </p>
+    <figure>
+        <img src="img/tomee/no_proxy.png" />
+        <figcaption>
+            Falls der neue Server in NetBeans nicht sichtbar ist, muss ggf. der Netzwerkproxy deaktiviert werden
+        </figcaption>
+    </figure>
+    <p>
+        Anschließend müsste der Server angezeigt werden und sich über das Kontextmenü starten lassen.
+    </p>
+    <figure>
+        <img src="img/tomee/start.png" />
+        <figcaption>
+            Wenn diese Meldung erscheint, wurde der TomEE-Server erfolgreich gestartet.
+        </figcaption>
+    </figure>
+</section>
+
+<!-- ––––––––––––––––––––––––––––––– -->
+<!-- Einrichtung eines GitHub-Kontos -->
+<!-- ––––––––––––––––––––––––––––––– -->
+<section id="sec-github" data-title="Einrichtung eines GitHub-Kontos">
+    <p>
+        <span class="nr">1)</span>
+        Besuche die Seite <a href="https://github.com" target="_blank">https://github.com</a> und eröffne ein neues Konto.
+    </p>
+    <figure>
+        <img src="img/github/signup.png" />
+        <figcaption>
+            Eröffnung eines neuen GitHub-Accounts
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">2)</span>
+        Logge dich auf GitHub ein und klicken oben rechts auf deinen Avatar. Anschließend wähle den Menüeintrag
+        <span class="scr">Settings</span> aus.
+    </p>
+    <figure>
+        <img src="img/github/settings-menu.png" />
+        <figcaption>
+            Aufruf der Einstellungen in GitHub
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">3)</span>
+        In den Einstellungen kannst du verschiedene Informationen über dich hinterlegen. Eine kurze Biographie,
+        ein Link auf deine Webseite sowie ein Fotos wären nicht schlecht. Mindestens solltest du aber deinen
+        SSH-Schlüssel hinterlegen, damit du beim Programmieren nicht ständig deine Zugangsdaten eintippen musst.
+        Klicke daher links auf <span class="scr">SSH and GPG keys</span>.
+    </p>
+
+    <p>
+        <span class="nr">4)</span>
+        Klicke nun oben rechts auf <span class="scr">New SSH key</span>. In der darauf folgenden Seite kannst du
+        dem Schlüssel einen Namen geben (typischerweise der Name des Computers, zu dem er gehört). In das Feld
+        <span class="scr">Key</span> musst du den Inhalt der Datei <span class="fn">c:\Benutzer\dein-benutzer\.ssh\id_rsa.pub</span>
+        einfügen. Unter Linux und macOS heißt die Datei stattdessen <span class="fn">~/.ssh/id/id_rsa.pub</span>.
+    </p>
+    <figure>
+        <img src="img/github/ssh-key.png" />
+        <figcaption>
+            Copy & Paste deines öffentlichen SSH-Schlüssels nach GitHub
+        </figcaption>
+    </figure>
+
+    <p>
+        Klicke anschließend auf <span class="scr">Add SSH key</span>, um den neuen Schlüssel zu speichern.
+    </p>
+</section>

@@ -23,13 +23,18 @@
         "clean": "node scripts/clean.js",
         "build": "npm run clean; parcel build src/*.html --public-url . --detailed-report --experimental-scope-hoisting",
         "watch": "npm run clean; parcel watch src/*.html --public-url . --detailed-report --experimental-scope-hoisting",
-        "start": "parcel src/index.html --open"
+        "start": "parcel src/*.html"
     },
     "devDependencies": {
+        "babel-core": "^6.26.3",
         "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-preset-env": "^1.7.0",
         "babel-runtime": "^6.26.0",
-        "mini-tutorial.js": "^1.0.7",
-        "parcel-bundler": "^1.9.7",
+        "mini-tutorial.js": "^1.0.8",
+        "parcel-bundler": "^1.11.0",
         "shelljs": "^0.7.8"
+    },
+    "dependencies": {
+        "highlight.js": "^9.14.2"
     }
 }

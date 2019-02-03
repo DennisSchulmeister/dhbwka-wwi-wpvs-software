@@ -1,43 +1,14 @@
-/*
- * Installation der benötigten Software für Webprogrammierung und Verteilte
- * Systeme im Studiengang Wirtschaftsinformatik an der DHBW Karlsruhe
- *
- * © 2018 Dennis Schulmeister-Zimolong <dhbw@windows3.de>
- * Lizenz: Creative Commons Namensnennung 4.0 International
- *
- * Sie dürfen:
- *
- *     Teilen — das Material in jedwedem Format oder Medium vervielfältigen
- *     und weiterverbreiten
- *
- *     Bearbeiten — das Material remixen, verändern und darauf aufbauen
- *     und zwar für beliebige Zwecke, sogar kommerziell.
- *
- * Unter folgenden Bedingungen:
- *
- *     Namensnennung — Sie müssen angemessene Urheber- und Rechteangaben
- *     machen, einen Link zur Lizenz beifügen und angeben, ob Änderungen
- *     vorgenommen wurden. Diese Angaben dürfen in jeder angemessenen Art
- *     und Weise gemacht werden, allerdings nicht so, dass der Eindruck
- *     entsteht, der Lizenzgeber unterstütze gerade Sie oder Ihre Nutzung
- *     besonders.
- *
- *     Keine weiteren Einschränkungen — Sie dürfen keine zusätzlichen Klauseln
- *     oder technische Verfahren einsetzen, die anderen rechtlich irgendetwas
- *     untersagen, was die Lizenz erlaubt.
- *
- * Es werden keine Garantien gegeben und auch keine Gewähr geleistet.
- * Die Lizenz verschafft Ihnen möglicherweise nicht alle Erlaubnisse,
- * die Sie für die jeweilige Nutzung brauchen. Es können beispielsweise
- * andere Rechte wie Persönlichkeits- und Datenschutzrechte zu beachten
- * sein, die Ihre Nutzung des Materials entsprechend beschränken.
- */
 "use strict";
 
 import MiniTutorial from "mini-tutorial.js";
 import mtThemeWhite from "mini-tutorial.js/themes/white.css";
+import mtThemeBook from "mini-tutorial.js/themes/book.css";
 import mtThemeCommon from "mini-tutorial.js/themes/common.css";
 import myStylesheet from "./style.css";
+
+import hljs from 'highlight.js/lib/highlight';
+import hljsLangXML from 'highlight.js/lib/languages/xml';
+import hljsStyle from "highlight.js/styles/atom-one-light.css";
 
 async function fetchChapters(chapters, callback) {
     let response = null;
@@ -61,15 +32,15 @@ function startApplication(html) {
         main.innerHTML = html;
     }
 
+    hljs.registerLanguage("html", hljsLangXML);
+    document.querySelectorAll("pre code").forEach(el => hljs.highlightBlock(el));
+
     let mt = new MiniTutorial();
     mt.start();
 }
 
 fetchChapters([
-    // Add HTML files here if you want to split the document.
-    // The HTML files should only contain <section>-elements without <html>/<head>/<body>
-    //
-    // "01-intro.html",
-    // "02-chapter2.html",
-    // ...
+    "01-webprog.html",
+    "02-vertsys.html",
+    "03-referenz.html",
 ], startApplication);

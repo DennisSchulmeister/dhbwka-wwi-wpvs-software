@@ -1,0 +1,174 @@
+<!-- ============================== -->
+<!-- 4. Semester: Verteilte Systeme -->
+<!-- ============================== -->
+<section data-chapter data-title="4. Semester: Verteilte Systeme"></section>
+
+<!-- –––––––––––––––––––––––– -->
+<!-- Was benötigen wir alles? -->
+<!-- –––––––––––––––––––––––– -->
+<section data-title="Was benötigen wir alles?">
+    <p>
+        Im vierten Semester dreht sich alles um die Entwicklung großer, verteilter
+        Anwendungen mit Java und der Jakarta Enterprise Edition. Neben einer guten
+        Entwicklungsumgebung benötigen wir daher auch verschiedene Server und
+        Testwerkzeuge. Insgesamt benötigen wir folgende Programme:
+    </p>
+    <ul>
+        <li>
+            Git
+        </li>
+        <li>
+            Java Development Kit
+        </li>
+        <li>
+            Apache NetBeans
+        </li>
+        <li>
+            Apache Maven
+        </li>
+        <li>
+            Apache TomEE
+        </li>
+        <li>
+            Apache Derby
+        </li>
+        <li>
+            SoapUI
+        </li>
+    </ul>
+    <p>
+        Die Programme haben dabei folgende Funktion:
+    </p>
+
+    <h3>Git</h3>
+    <p>
+        Wie es sich gehört werden wir auch dieses Semester wieder in Gruppen arbeiten,
+        um gemeinsame Projekte zu bearbeiten. Git dient uns dabei als Versionsverwaltung,
+        die einerseits alle Änderungen am Code nachvollziehbar macht und andererseits
+        dabei hilft, den Code innerhalb eines Teams zu teilen.
+    </p>
+
+    <h3>Java Development Kit</h3>
+    <p>
+        Für die Programmierung werden wir dieses Semester voll auf Java setzen. Du
+        benötigst daher eine aktuelle Version des Java Development Kit als Compiler
+        und Laufzeitumgebung.
+    </p>
+
+    <h3>Apache NetBeans</h3>
+    <p>
+        Wie bei den meisten anderen Programmiersprachen reicht im Grunde genommen ein
+        einfacher Texteditor bereits aus, um Java-Quellcodes zu schreiben und zu bearbeiten.
+        Üblicherweise würde man aber trotzdem eine vollwertige Entwicklungsumgebung nutzen.
+        In der Vorlesung nutzen wir hierfür NetBeans, da es leichter zu bedienen als die
+        anderen ist und im Hintergrund Standardwerkzeuge wie Ant und Maven anstelle
+        proprietärer Lösungen nutzt.
+    </p>
+
+    <h3>Apache Maven</h3>
+    <p>
+        Maven ist in der NetBeans-Installation bereits enthalten, kann aber auch als eigenständiges
+        Programm installiert werden. Es vereinfacht nicht nur die Kompilierung, sondern greift im
+        Hintergrund auch auf ein großes Repository an Java-Bibliotheken zu, die wir in unseren
+        Anwendungen verwenden können.
+    </p>
+
+    <h3>Apache TomEE</h3>
+    <p>
+        Serverseitig nutzen die meisten Java-Anwendungen einen so genannten Applikationsserver
+        als Laufzeitumgebung. Denn als Bestandteil der Jakarta Enterprise Edition bietet er
+        die gesamte technische Infrastruktur, die wir zur Entwicklung benötigen, so dass wir
+        uns nur um die fachliche Anwendungslogik kümmern müssen. In der Vorlesung nutzen wir
+        den TomEE von Apache, da dieser mit weniger Ressourcen auskommt und erfahrungsgemäß
+        auch stabiler läuft, als andere Server.
+    </p>
+
+    <h3>Apache Derby</h3>
+    <p>
+        Kaum eine verteilte Anwendung kommt ohne eine Datenbank zur Speicherung und Verwaltung
+        ihrer Daten aus, wobei hier meistens klassische SQL-Datenbanken zum Einsatz kommen.
+        Kein Wunder also, dass Jakarta auch hier entsprechende Klassen definiert. Die meisten
+        Datenbanken sind dabei mit Java kompatibel, wir nutzen aber Apache Derby, da sie
+        nur wenig Speicher belegt und ohne großartige Installation auskommt.
+    </p>
+
+    <h3>SoapUI</h3>
+    <p>
+        Im Rahmen der Vorlesung werden wir auch SOAP- und REST-Webservices programmieren,
+        die häufig zur Kommunikation in verteilten Anwendungen genutzt werden. Dabei werden
+        wir natürlich nicht umhin kommen, diese Services auch zu testen, was mit SoapUI
+        besonders einfach von der Hand geht.
+    </p>
+</section>
+
+<!-- ––––––––––––––––––––––––––––––––––––– -->
+<!-- Bevor es losgehen kann                -->
+<!-- Installation von Git                  -->
+<!-- Installation des Java Development Kit -->
+<!-- Installation von NetBeans und Maven   -->
+<!-- Installation von TomEE und Derby      -->
+<!-- ––––––––––––––––––––––––––––––––––––– -->
+<section data-clone="#sec-start"></section>
+<section data-clone="#sec-git"></section>
+<section data-clone="#sec-java"></section>
+<section data-clone="#sec-NetBeans"></section>
+<section data-clone="#sec-tomee"></section>
+
+<!-- ––––––––––––––––––––––– -->
+<!-- Installation von SoapUI -->
+<!-- ––––––––––––––––––––––– -->
+<section data-title="Installation von SoapUI">
+    <p>
+        <span class="nr">1)</span>
+        Besuche die Webseite <a href="https://www.soapui.org/" target="_blank">https://www.soapui.org/</a> und lade die
+        Open-Source-Version von SoapUI herunter. Diese ist auf der Webseite leider etwas versteckt, da der Hersteller
+        einem lieber die kostenpflichtige Pro-Version andrehen will …
+    </p>
+    <figure>
+        <img src="img/soapui/download.png" />
+        <figcaption>
+            Download von SoapUI
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">2)</span>
+        Unter Windows heißt die Installationsdatei <span class="fn">SoapUI-x32-5.4.0.exe</span>
+        oder ähnlich, wobei <span class="fn">5.4.0</span> die Versionsnummer ist und daher bei dir
+        abweichen kann. Starte die Datei, um die Installation zu beginnen.
+    </p>
+    <figure>
+        <img src="img/soapui/installation_1.png" />
+        <figcaption>
+            Installation von SoapUI
+        </figcaption>
+    </figure>
+    <p>
+        Unter Linux handelt es sich stattdessen einfach um eine ZIP-Datei, die du in unser Softwareverzeichnis
+        extrahieren kannst. Der Start der Anwendung erfolgt hier mit der Datei <span class="fn">bin\soapui.sh</span>.
+    </p>
+    <figure>
+        <img src="img/soapui/linux.png" />
+        <figcaption>
+            Start von SoapUI unter Linux
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">3)</span>
+        Bei der Auswahl der zu installierenden Komponenten kannst du alles abwählen. Wir benötigen kein <span class="scr">HermesJMS</span>
+        und auch keine Tutorials für SoapUI. Danach kannst du die Installation durchlaufen lassen.
+    </p>
+    <figure>
+        <img src="img/soapui/installation_2.png" />
+        <figcaption>
+            Abwählen aller Zusatzkomponenten bei der Installation von SoapUI
+        </figcaption>
+    </figure>
+    <p>
+</section>
+
+<!-- ––––––––––––––––––––––––––––––– -->
+<!-- Einrichtung eines GitHub-Kontos -->
+<!-- ––––––––––––––––––––––––––––––– -->
+<section data-clone="#sec-github" ></section>

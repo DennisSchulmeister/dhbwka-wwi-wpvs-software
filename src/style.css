@@ -33,16 +33,11 @@
  * sein, die Ihre Nutzung des Materials entsprechend beschränken.
  */
 
-/** Screenshot images, duh! **/
-.screenshot {
-    display: block;
-    width: 100%;
-    margin-bottom: 1em;
-}
+ /* Deutsche Nummerierung für Abbildungen */
+ :root {
+     --figure-short-code: 'Abb. ';
+ }
 
-@media print {
-    .screenshot {
-        width: 60%;
-        margin: 0 auto;
-    }
+.nr {
+    color: crimson;
 }

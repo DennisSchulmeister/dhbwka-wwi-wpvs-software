@@ -15,7 +15,9 @@ an der DHBW Karlsruhe benötigten Software erklärt.
  * [Git](https://git-scm.com/)
  * [node.js](https://nodejs.org/)
  * [Netbeans](http://netbeans.apache.org/)
- * [GlassFish](https://javaee.github.io/glassfish/)
+ * [TomEE](http://tomee.apache.org/)
+ * [Derby](https://db.apache.org/derby/)
+ * [SoapUI](https://www.soapui.org/)
 
 Die Installation aller Komponenten wird Schritt für Schritt mit vielen
 Screenshots erklärt. Dabei werden auch die notwendigen Einstellungen und
@@ -30,7 +32,7 @@ Copyright
 Dieses Projekt ist lizenziert unter
 [_Creative Commons Namensnennung 4.0 International_](http://creativecommons.org/licenses/by/4.0/)
 
-© 2018 Dennis Schulmeister-Zimolong <br/>
+© 2018 – 2019 Dennis Schulmeister-Zimolong <br/>
 
 E-Mail: [dhbw@windows3.de](mailto:dhbw@windows3.de) <br/>
 Webseite: https://www.wpvs.de
