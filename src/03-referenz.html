@@ -204,4 +204,23 @@
         openejb.deploymentId.format = {ejbJarId}/{ejbName}
         </code>
     </pre>
+
+    <h3>Entfernte Methodenaufrufe für EJBs aktivieren</h3>
+    <p>
+        Seit TomEE 1.7.4 besitzt TomEE Blacklists und Whitelists für die Serialisierung von Objekten. Diese sind
+        aus Sicherheitsgründen so eingestellt, dass alle Klassen auf der Blacklist stehen und die Whitelist komplett
+        leer ist, wodurch entfernte Aufrufe der Enterprise Java Beans effektiv verhindert werden. Dummerweise hat
+        die Blacklist immer eine höhere Priorität als die Whitelist. Umgekehrt wäre besser gewesen, um die Konfiguration
+        zu vereinfachen …
+    </p>
+    <p>
+        In der Datei <span class="fn">conf/system.properties</span> mussten daher folgende zwei Werte geändert werden,
+        um die Blacklist zu deaktivieren und den Remote-Aufruf freizuschalten.
+    </p>
+    <pre data-gobble>
+        <code data-gobble>
+            tomee.serialization.class.blacklist = -
+            tomee.remote.support = true
+        </code>
+    </pre>
 </section>
