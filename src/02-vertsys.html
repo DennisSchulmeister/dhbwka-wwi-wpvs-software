@@ -8,10 +8,10 @@
 <!-- –––––––––––––––––––––––– -->
 <section data-title="Was benötigen wir alles?">
     <p>
-        Im vierten Semester dreht sich alles um die Entwicklung großer, verteilter
-        Anwendungen mit Java und der Jakarta Enterprise Edition. Neben einer guten
-        Entwicklungsumgebung benötigen wir daher auch verschiedene Server und
-        Testwerkzeuge. Insgesamt benötigen wir folgende Programme:
+        Im vierten Semester beschäftigen wir uns hauptsächlich mit der Backend-Entwicklung
+        und verteilten Microservice-Architekturen. Diese werden wir in Java programmieren,
+        wofür wir natürlich entsprechende Entwicklungswerkzeuge benötigen. Folgende
+        Programme solltest du daher auf deinem Rechner installieren:
     </p>
     <ul>
         <li>
@@ -21,31 +21,22 @@
             Java Development Kit
         </li>
         <li>
-            Apache NetBeans
+            Eine Java IDE nach Wahl
+        </li>
+    </ul>
+    <p>
+        Zum Testen unserer Entwicklungen kommen dann noch folgende Programm hinzu:
+    </p>
+    <ul>
+        <li>
+            Postman
         </li>
         <li>
-            Apache Maven
-        </li>
-        <li>
-            Apache TomEE
-        </li>
-        <li>
-            Apache Derby
-        </li>
-        <li>
-            SoapUI
+            CorreoMQTT
         </li>
     </ul>
     <p>
         Die Programme haben dabei folgende Funktion:
-    </p>
-
-    <h3>Git</h3>
-    <p>
-        Wie es sich gehört werden wir auch dieses Semester wieder in Gruppen arbeiten,
-        um gemeinsame Projekte zu bearbeiten. Git dient uns dabei als Versionsverwaltung,
-        die einerseits alle Änderungen am Code nachvollziehbar macht und andererseits
-        dabei hilft, den Code innerhalb eines Teams zu teilen.
     </p>
 
     <h3>Java Development Kit</h3>
@@ -60,9 +51,9 @@
         Wie bei den meisten anderen Programmiersprachen reicht im Grunde genommen ein
         einfacher Texteditor bereits aus, um Java-Quellcodes zu schreiben und zu bearbeiten.
         Üblicherweise würde man aber trotzdem eine vollwertige Entwicklungsumgebung nutzen.
-        In der Vorlesung nutzen wir hierfür NetBeans, da es leichter zu bedienen als die
-        anderen ist und im Hintergrund Standardwerkzeuge wie Ant und Maven anstelle
-        proprietärer Lösungen nutzt.
+        Welche IDE du bevorzugst, bleibt dir überlassen, solange du damit Maven-Projekte
+        bearbeiten und ausführen kannst. Mit Eclipse, NetBeans oder IntelliJ kannst du
+        deshalb nichts falsch machen.
     </p>
 
     <h3>Apache Maven</h3>
@@ -73,31 +64,21 @@
         Anwendungen verwenden können.
     </p>
 
-    <h3>Apache TomEE</h3>
+    <h3>Postman</h3>
     <p>
-        Serverseitig nutzen die meisten Java-Anwendungen einen so genannten Applikationsserver
-        als Laufzeitumgebung. Denn als Bestandteil der Jakarta Enterprise Edition bietet er
-        die gesamte technische Infrastruktur, die wir zur Entwicklung benötigen, so dass wir
-        uns nur um die fachliche Anwendungslogik kümmern müssen. In der Vorlesung nutzen wir
-        den TomEE von Apache, da dieser mit weniger Ressourcen auskommt und erfahrungsgemäß
-        auch stabiler läuft, als andere Server.
+        Gleich am Anfang der Vorlesung werden wir unsere eigenen REST-Webservices
+        programmieren, um somit eine Schnittstelle zwischen Frontend und Backend
+        zu definieren. Um die Fehlersuche zu vereinfachen, werden wir die Webservices
+        dabei erst mit Postman testen, bevor wir sie im Frontend verwenden.
     </p>
 
-    <h3>Apache Derby</h3>
+    <h3>CorreoMQTT</h3>
     <p>
-        Kaum eine verteilte Anwendung kommt ohne eine Datenbank zur Speicherung und Verwaltung
-        ihrer Daten aus, wobei hier meistens klassische SQL-Datenbanken zum Einsatz kommen.
-        Kein Wunder also, dass Jakarta auch hier entsprechende Klassen definiert. Die meisten
-        Datenbanken sind dabei mit Java kompatibel, wir nutzen aber Apache Derby, da sie
-        nur wenig Speicher belegt und ohne großartige Installation auskommt.
-    </p>
-
-    <h3>SoapUI</h3>
-    <p>
-        Im Rahmen der Vorlesung werden wir auch SOAP- und REST-Webservices programmieren,
-        die häufig zur Kommunikation in verteilten Anwendungen genutzt werden. Dabei werden
-        wir natürlich nicht umhin kommen, diese Services auch zu testen, was mit SoapUI
-        besonders einfach von der Hand geht.
+        Später in der Vorlesung schauen wir uns das asynchrone Publish/Subscribe-Pattern
+        auf Basis des MQTT-Protokolls an. Auch wenn dieses im Grunde genommen sehr einfach
+        zu programmieren ist, machen manuelle Tests hier ebenfalls Sinn. CorreoMQTT ist ein
+        in Karlsruhe entwickeltes Testwerkzeug, mit dem wir uns ohne zu Programmieren mit
+        einem Message Broker verbinden und MQTT-Nachrichten senden und empfangen können.
     </p>
 </section>
 
@@ -106,7 +87,6 @@
 <!-- Installation von Git                  -->
 <!-- ––––––––––––––––––––––––––––––––––––– -->
 <section data-clone="#sec-start"></section>
-<section data-clone="#sec-git"></section>
 
 <!-- ––––––––––––––––––––––––––––––––––––– -->
 <!-- Installation des Java Development Kit -->
@@ -215,6 +195,11 @@
 <!-- Installation von NetBeans und Maven -->
 <!-- ––––––––––––––––––––––––––––––––––– -->
 <section id="sec-NetBeans" data-title="Installation von NetBeans und Maven">
+    <p>
+        <b>Hinweis:</b> An dieser Stelle zeigen wir exemplarisch die Installation
+        von NetBeans zusammen mit Maven. Wie gesagt, kannst du aber auch jede andere
+        Java IDE verwenden.
+    </p>
     <p>
         <span class="nr">1)</span>
         Besuche die Webseite <a href="https://netbeans.apache.org" target="_blank">https://netbeans.apache.org</a>
@@ -404,203 +389,16 @@
     </figure>
 </section>
 
-<!-- –––––––––––––––––––––––––––––––– -->
-<!-- Installation von TomEE und Derby -->
-<!-- –––––––––––––––––––––––––––––––– -->
-<section id="sec-tomee" data-title="Installation von TomEE und Derby">
-    <p>
-        <span class="nr">1)</span>
-        Auf Moodle haben wir eine vorkonfigurierte Version von Apache TomEE und Apache Derby zur Verfügung gestellt.
-        Lade das ZIP-Archiv auf deinen Rechner runter.
-    </p>
-    <figure>
-        <img src="img/tomee/download.png" />
-        <figcaption>
-            Download von TomEE und Derby
-        </figcaption>
-    </figure>
-
-    <p>
-        <span class="nr">2)</span>
-        Das ZIP-Archiv heißt schlicht <span class="fn">TomEE und Derby.zip</span>. Entpacke es in das Softwareverzeichnis für
-        unsere Vorlesung. Dabei sollten die drei Verzeichnisse <span class="fn">apache-tomee-plume-8.0.0-M1</span>,
-        <span class="fn">db-derby-10.14.2.0-bin</span> und <span class="fn">Datenbankinhalt</span> entstehen.
-        Die exakten Versionsnummern können natürlich abweichen.
-    </p>
-    <figure>
-        <img src="img/tomee/entpacken_1.png" />
-        <figcaption>
-            Entpacken von TomEE und Derby
-        </figcaption>
-    </figure>
-    <figure>
-        <img src="img/tomee/entpacken_2.png" />
-        <figcaption>
-            So sollte das Ergebnis aussehen
-        </figcaption>
-    </figure>
-
-    <p>
-        <span class="nr">3)</span>
-        Zunächst wollen wir die Datenbank einrichten. Wechsle daher in NetBeans auf den Reiter <span class="scr">Services</span> und
-        öffne dort das per Rechtsklick Kontextmenü zum Eintrag <span class="scr">Databases</span> → <span class="scr">Java DB</span>.
-        Innerhalb des Menüs gehe dann auf <span class="scr">Properties…</span>.
-    </p>
-    <figure>
-        <img src="img/tomee/derby_config_1.png" />
-        <figcaption>
-            Öffnen der Derby-Konfiguration in NetBeans
-        </figcaption>
-    </figure>
-
-    <p>
-        <span class="nr">4)</span>
-        Wähle folgende, eben entpackte Verzeichnisse in dem Fenster aus und bestätige diese mit <span class="scr">OK</span>.
-    </p>
-    <ul>
-        <li>
-            <span class="scr">Java DB Installation:</span> <span class="fn">db-derby-10.14.2.0-bin</span>
-        </li>
-        <li>
-            <span class="scr">Database Location:</span> <span class="fn">Datenbankinhalt</span>
-        </li>
-    </ul>
-    <figure>
-        <img src="img/tomee/derby_config_2.png" />
-        <figcaption>
-            Konfiguration der Datenbankverzeichnisse in NetBeans
-        </figcaption>
-    </figure>
-
-    <p>
-        <span class="nr">5)</span>
-        Durch die eben vorgenommene Konfiguration sollte ein neuer Eintrag namens <span class="scr">jdbc:derby://localhost:1527/sample</span>
-        im Ordner <span class="scr">Databases</span> erscheinen. Klicke ihn mit der rechten Maustaste an und gehe dann auf <span class="scr">Connect…</span>,
-        um die Datenbank zu starten. Daraufhin sollten innerhalb des Ordners weitere Einträge mit den Schemas und Tabellen der Datenbank auftauchen.
-        <b>Diesen Schritt musst du nun immer ausführen, wenn du eine Datenbankanwendung mit NetBeans entwickeln willst.</b>
-    </p>
-    <figure>
-        <img src="img/tomee/derby_config_3.png" />
-        <figcaption>
-            Alles in Ordnung, die Datenbank läuft
-        </figcaption>
-    </figure>
-
-    <p>
-        <span class="nr">6)</span>
-        Weiter geht es mit dem Applikationsserver. Öffne hierfür weiterhin im Reiter <span class="scr">Services</span> das Kontextmenü zum
-        Eintrag <span class="scr">Servers</span> und gehe dort auf <span class="scr">Add Server…</span>. Im darauf folgenden Fenster wähle
-        den Eintrag <span class="scr">Apache Tomcat or TomEE</span> aus und klicke auf <span class="scr">Next</span>.
-    </p>
-    <figure>
-        <img src="img/tomee/nb_server_1.png" />
-        <figcaption>
-            Hinzufügen eines Tomcat- oder TomEE-Servers zu NetBeans
-        </figcaption>
-    </figure>
-
-    <p>
-        <span class="nr">7)</span>
-        Gib im nächsten Schritt nun folgende Werte ein und schließe das Fenster dann mit <span class="scr">Finish</span>.
-        Benutzername und Passwort kannst du frei wählen. Der Einfachheit halber nehmen wir hier <span class="cmd">admin</span>
-        und <span class="cmd">admin</span>, die bereits in der TomEE-Konfiguration hinterlegt sind.
-    </p>
-    <ul>
-        <li>
-            <span class="scr">Server Location:</span> <span class="fn">apache-tomee-plume-8.0.0-M1</span>
-        </li>
-        <li>
-            <span class="scr">Username:</span> <span class="cmd">admin</span>
-        </li>
-        <li>
-            <span class="scr">Password:</span> <span class="cmd">admin</span>
-        </li>
-    </ul>
-    <figure>
-        <img src="img/tomee/nb_server_2.png" />
-        <figcaption>
-            Installationspfad und Zugangsdaten des TomEE-Servers
-        </figcaption>
-    </figure>
-
-    <p>
-        <span class="nr">8)</span>
-        Falls der neue Server nicht nach wenigen Sekunden im Ordner <span class="scr">Servers</span> zu sehen ist,
-        wähle den Menüpunkt <span class="scr">Tools</span> → <span class="scr">Options</span> aus und setze dort
-        den Radiobutton bei <span class="scr">No Proxy</span>. Anschließend musst du NetBeans neustarten.
-    </p>
-    <figure>
-        <img src="img/tomee/no_proxy.png" />
-        <figcaption>
-            Falls der neue Server in NetBeans nicht sichtbar ist, muss ggf. der Netzwerkproxy deaktiviert werden
-        </figcaption>
-    </figure>
-    <p>
-        Anschließend müsste der Server angezeigt werden und sich über das Kontextmenü starten lassen.
-    </p>
-    <figure>
-        <img src="img/tomee/start.png" />
-        <figcaption>
-            Wenn diese Meldung erscheint, wurde der TomEE-Server erfolgreich gestartet.
-        </figcaption>
-    </figure>
+<!-- –––––––––––––––––––––––– -->
+<!-- Installation von Postman -->
+<!-- –––––––––––––––––––––––– -->
+<section data-title="Installation von Postman">
+    TODO
 </section>
 
-<!-- ––––––––––––––––––––––– -->
-<!-- Installation von SoapUI -->
-<!-- ––––––––––––––––––––––– -->
-<section data-title="Installation von SoapUI">
-    <p>
-        <span class="nr">1)</span>
-        Besuche die Webseite <a href="https://www.soapui.org/" target="_blank">https://www.soapui.org/</a> und lade die
-        Open-Source-Version von SoapUI herunter. Diese ist auf der Webseite leider etwas versteckt, da der Hersteller
-        einem lieber die kostenpflichtige Pro-Version andrehen will …
-    </p>
-    <figure>
-        <img src="img/soapui/download.png" />
-        <figcaption>
-            Download von SoapUI
-        </figcaption>
-    </figure>
-
-    <p>
-        <span class="nr">2)</span>
-        Unter Windows heißt die Installationsdatei <span class="fn">SoapUI-x32-5.4.0.exe</span>,
-        wobei <span class="fn">5.4.0</span> die Versionsnummer ist und daher bei dir abweichen
-        kann. Starte die Datei, um die Installation zu beginnen.
-    </p>
-    <figure>
-        <img src="img/soapui/installation_1.png" />
-        <figcaption>
-            Installation von SoapUI
-        </figcaption>
-    </figure>
-    <p>
-        Unter Linux handelt es sich stattdessen einfach um eine ZIP-Datei, die du in unser Softwareverzeichnis
-        extrahieren kannst. Der Start der Anwendung erfolgt hier mit der Datei <span class="fn">bin/soapui.sh</span>.
-    </p>
-    <figure>
-        <img src="img/soapui/linux.png" />
-        <figcaption>
-            Start von SoapUI unter Linux
-        </figcaption>
-    </figure>
-
-    <p>
-        <span class="nr">3)</span>
-        Bei der Auswahl der zu installierenden Komponenten kannst du alles abwählen. Wir benötigen kein <span class="scr">HermesJMS</span>
-        und auch keine <span class="scr">Tutorials</span> für SoapUI. Danach kannst du die Installation durchlaufen lassen.
-    </p>
-    <figure>
-        <img src="img/soapui/installation_2.png" />
-        <figcaption>
-            Abwählen aller Zusatzkomponenten bei der Installation von SoapUI
-        </figcaption>
-    </figure>
-    <p>
+<!-- ––––––––––––––––––––––––––– -->
+<!-- Installation von CorreoMQTT -->
+<!-- ––––––––––––––––––––––––––– -->
+<section data-title="Installation von CorreoMQTT">
+    TODO
 </section>
-
-<!-- ––––––––––––––––––––––––––––––– -->
-<!-- Einrichtung eines GitHub-Kontos -->
-<!-- ––––––––––––––––––––––––––––––– -->
-<section data-clone="#sec-github" ></section>

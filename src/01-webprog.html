@@ -23,20 +23,6 @@
         <li>
             Atom
         </li>
-        <!--
-        <li>
-            Java Development Kit
-        </li>
-        <li>
-            Apache NetBeans
-        </li>
-        <li>
-            Apache TomEE
-        </li>
-        <li>
-            Apache Derby
-        </li>
-        -->
     </ul>
     <p>
         Die Programme haben dabei folgende Funktion:
@@ -69,42 +55,6 @@
         Vorlesung verwenden wir deshalb Atom, der von den Machern von GitHub speziell für
         Webentwickler angeboten wird und sich entsprechend großer Beliebtheit erfreut.
     </p>
-
-    <!--
-    <h3>Java Development Kit</h3>
-    <p>
-        Im Laufe der Vorlesung werden wir uns irgendwann auch der serverseitigen
-        Webprogrammierung zuwenden und dabei dann auf Java zurückkommen. Du benötigst
-        deshalb weiterhin eine aktuelle Version des Java Development Kit als Compiler
-        und Laufzeitumgebung auf deinem Rechner.
-    </p>
-
-    <h3>Apache NetBeans</h3>
-    <p>
-        Für die Programmierung in Java werden wir von Atom auf NetBeans umsteigen.
-        Zwar könnten wir auch hier Atom weiter verwenden, NetBeans bietet uns aber
-        einige Werkzeuge und Programmierhilfen speziell für Java, die es in Atom
-        nicht gibt. Es spielt in einer Liga mit Eclipse und InelliJ, ist im Vergleich
-        zu diesen aber deutlich einfacher zu bedienen.
-    </p>
-
-    <h3>Apache TomEE</h3>
-    <p>
-        TomEE ist ein so genannter Applikationsserver, der uns bei der Programmierung
-        auf Serverseite unterstützen wird. Er ist sozusagen der Webserver, innerhalb
-        dessen unsere Webanwendungen laufen werden. Neben Webanwendungen kann er noch
-        viel mehr, was wir uns aber erst nächstes Semester genauer anschauen werden.
-    </p>
-
-    <h3>Apache Derby</h3>
-    <p>
-        Serverseitig nutzen die meisten Webanwendungen eine (relationale) Datenbank,
-        um größere Datenmengen zu speichern und verwalten. Im dritten Semester werden
-        wir uns damit nur sehr oberflächlich beschäftigen. Einige unserer Beispiele
-        greifen hier aber schon dem vierten Semester voraus, so dass wir die Datenbank
-        an dieser Stelle gleich mit installieren.
-    </p>
-    -->
 </section>
 
 <!-- –––––––––––––––––––––– -->
@@ -228,6 +178,22 @@
         An dieser Stelle solltest du dann gleich noch deinen Namen und deine E-Mailadresse in der Git-Konfiguration
         hinterlegen. Somit kann Git die von dir vorgenommenen Änderungen an einem Quellcode auch wirklich dir zuordnen.
         Gib daher folgende Befehle ein, wobei du <span class="scr">Max Mustermann</span> natürlich ersetzen musst:
+    </p>
+    <p class="cmd">
+        git config --global user.email "max@mustermann.de" <br />
+        git config --global user.name "Max Mustermann"
+    </p>
+    <p>
+        <b>Hinweis für mac-User:</b> Sollte an dieser Stelle die Fehlermeldung <span class="scr">Invalid active
+        developer path</span> erscheinen, musst du die
+        <a href="http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/" target="_blank">Kommandozeilenwerkzeuge von Xcode installieren</a>.
+        Gib hierfür einfach folgenden Befehl ein und klicke die Installation durch:
+    </p>
+    <p class="cmd">
+        xcode-select --install
+    </p>
+    <p>
+        Danach kannst du die Befehle zur Einrichtung von Git erneut versuchen:
     </p>
     <p class="cmd">
         git config --global user.email "max@mustermann.de" <br />
