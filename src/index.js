@@ -42,5 +42,4 @@ function startApplication(html) {
 fetchChapters([
     "01-webprog.html",
     "02-vertsys.html",
-    "03-referenz.html",
 ], startApplication);
