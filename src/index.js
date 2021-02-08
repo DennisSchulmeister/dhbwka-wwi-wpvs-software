@@ -6,7 +6,7 @@ import mtThemeBook from "mini-tutorial.js/themes/book.css";
 import mtThemeCommon from "mini-tutorial.js/themes/common.css";
 import myStylesheet from "./style.css";
 
-import hljs from 'highlight.js/lib/highlight';
+import hljs from 'highlight.js/lib/core';
 import hljsLangXML from 'highlight.js/lib/languages/xml';
 import hljsStyle from "highlight.js/styles/atom-one-light.css";
 
@@ -42,4 +42,5 @@ function startApplication(html) {
 fetchChapters([
     "01-webprog.html",
     "02-vertsys.html",
+    "03-obsolet.html",
 ], startApplication);

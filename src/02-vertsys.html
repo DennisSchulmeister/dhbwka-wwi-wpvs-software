@@ -15,24 +15,16 @@
     </p>
     <ul>
         <li>
-            Git
-        </li>
-        <li>
             Java Development Kit
         </li>
         <li>
             Eine Java IDE nach Wahl
         </li>
-    </ul>
-    <p>
-        Zum Testen unserer Entwicklungen kommen dann noch folgende Programm hinzu:
-    </p>
-    <ul>
         <li>
-            Postman
+            Maven (falls nicht in der IDE enthalten)
         </li>
         <li>
-            CorreoMQTT
+            Postman (zum Testen von Webservices)
         </li>
     </ul>
     <p>
@@ -71,20 +63,10 @@
         zu definieren. Um die Fehlersuche zu vereinfachen, werden wir die Webservices
         dabei erst mit Postman testen, bevor wir sie im Frontend verwenden.
     </p>
-
-    <h3>CorreoMQTT</h3>
-    <p>
-        Später in der Vorlesung schauen wir uns das asynchrone Publish/Subscribe-Pattern
-        auf Basis des MQTT-Protokolls an. Auch wenn dieses im Grunde genommen sehr einfach
-        zu programmieren ist, machen manuelle Tests hier ebenfalls Sinn. CorreoMQTT ist ein
-        in Karlsruhe entwickeltes Testwerkzeug, mit dem wir uns ohne zu Programmieren mit
-        einem Message Broker verbinden und MQTT-Nachrichten senden und empfangen können.
-    </p>
 </section>
 
 <!-- ––––––––––––––––––––––––––––––––––––– -->
 <!-- Bevor es losgehen kann                -->
-<!-- Installation von Git                  -->
 <!-- ––––––––––––––––––––––––––––––––––––– -->
 <section data-clone="#sec-start"></section>
 
@@ -92,6 +74,15 @@
 <!-- Installation des Java Development Kit -->
 <!-- ––––––––––––––––––––––––––––––––––––– -->
 <section id="sec-java" data-title="Installation des Java Development Kit">
+    <p>
+        <b>Hinweis:</b> Diese Anleitung beschriebt die Installation der offizielen
+        OpenJDK-Version unter Windows. Da das OpenJDK kein Installationsprogramm
+        für Windows pflegt, müssen die Installationsdateien manuell auf dem Computer
+        entpackt werden und anschließend die Umgebungsvariablen des Betriebssystems
+        angepasst werden. Etwas einfacher könnte daher die Verwendung des OpenJDK-Forks
+        <a href="https://sap.github.io/SapMachine/" target="_blank">SAPMachine</a> sein,
+        der ein Installationsprogramm besitzt.
+    </p>
     <p>
         <span class="nr">1)</span>
         Besuche die Webseite <a href="https://jdk.java.net" target="_blank">https://jdk.java.net</a>
@@ -376,7 +367,7 @@
         eine Weile, bis sich das Fenster kurz schließt und wieder öffnet und dadurch Maven aktiviert wurde.
         Du kannst das Fenster danach gleich mit <span class="scr">OK</span> wieder schließen.
     </p>
-    <p>7
+    <p>
         Zum Test, ob Maven nun vollständig eingerichtet wurde, gehe auf <span class="scr">File</span> → <span class="scr">New Project…</span>
         und prüfe, ob in der Kategorie <span class="scr">Maven</span> der Eintrag <span class="scr">Web Application</span> erscheint.
         Eventuell taucht der Eintrag dabei nicht von Anfang an auf, nach einer Weile sollte er aber irgendwann hier zur Verfügung stehen.
@@ -393,12 +384,37 @@
 <!-- Installation von Postman -->
 <!-- –––––––––––––––––––––––– -->
 <section data-title="Installation von Postman">
-    TODO
-</section>
+    <p>
+        <span class="nr">1)</span> Besuche die Webseite
+        <a href="https://www.postman.com/downloads/" target="_blank">postman.com/downloads/</a>
+        und lader die Installationsdatei von Postman herunter.
+    </p>
+    <figure>
+        <img src="img/postman/download.png" />
+        <figcaption>
+            Download von Postman
+        </figcaption>
+    </figure>
 
-<!-- ––––––––––––––––––––––––––– -->
-<!-- Installation von CorreoMQTT -->
-<!-- ––––––––––––––––––––––––––– -->
-<section data-title="Installation von CorreoMQTT">
-    TODO
+    <p>
+        <span class="nr">2)</span> Unter Windows heißt die Installationsdatei <span class="fn">Postman-win64-8.0.4-Setup.exe</span>,
+        wobei die Versionsnummer auch eine andere sein kann. Die Installation läuft komplett automatisch ab.
+    </p>
+    <figure>
+        <img src="img/postman/installation.png" style="max-width: 30em;"/>
+        <figcaption>
+            Installation von Postman
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">3)</span> Das war's auch schon. Nach Abschluss der Installation öffnet sich Postman von selbst.
+        Das Fenster kann einfach geschlossen werden.
+    </p>
+    <figure>
+        <img src="img/postman/start.png" />
+        <figcaption>
+            Programmfesnter von Postman
+        </figcaption>
+    </figure>
 </section>

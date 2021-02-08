@@ -15,9 +15,6 @@
     </p>
     <ul>
         <li>
-            Git
-        </li>
-        <li>
             node.js
         </li>
         <li>
@@ -26,16 +23,6 @@
     </ul>
     <p>
         Die Programme haben dabei folgende Funktion:
-    </p>
-
-    <h3>Git</h3>
-    <p>
-        Einst waren Compiler und Editor alles, was man zum Programmieren benötigte.
-        Doch je größer ein Projekt wird, desto schwieriger wird es, die Änderungen
-        am Quellcode nachvollziehbar zu dokumentieren, so dass schon früh spezielle
-        Werkzeuge hierfür entstanden sind. Git ist ein solches Werkzeug. es ermöglicht
-        uns darüber hinaus aber auch, mit mehreren Personen am selben Quellcode zu
-        arbeiten und diesen über das Internet zu teilen.
     </p>
 
     <h3>node.js</h3>
@@ -83,148 +70,6 @@
     </figure>
     <p>
         Verzeichnis angelegt? Alles klar! Dann kann es jetzt los gehen.
-    </p>
-</section>
-
-<!-- –––––––––––––––––––– -->
-<!-- Installation von git -->
-<!-- –––––––––––––––––––– -->
-<section id="sec-git" data-title="Installation von Git">
-    <p>
-        <span class="nr">1)</span>
-        Besuche die Webseite <a href="https://git-scm.com/" target="_blank">https://git-scm.com/</a>
-        und lade das Installationspaket für dein Betriebssystem herunter.
-    </p>
-    <figure>
-        <img src="img/git/download.png" />
-        <figcaption>
-            Download von Git
-        </figcaption>
-    </figure>
-
-    <p>
-        <span class="nr">2)</span>
-        Unter Windows heißt die Installationsdatei <span class="fn">Git-2.18.0-64-bit.exe</span>
-        oder ähnlich, wobei <span class="fn">2.18.0</span> die Versionsnummer ist und daher bei dir
-        abweichen kann. Starte die Datei, um die Installation zu beginnen. Während der Installation
-        wirst du gefragt, welche Komponenten installiert werden sollen. Du kannst die Vorauswahl
-        einfach übernehmen und auf weiter klicken.
-    </p>
-    <figure>
-        <img src="img/git/installation_1.png" />
-        <figcaption>
-            Auswahl der zu installierenden Komponenten
-        </figcaption>
-    </figure>
-    <p>
-        Im nächsten Schritt fragt das Setup, mit welchem Editor du deine Commit-Nachrichten erfassen willst.
-        Falls hier <span class="scr">Notepad++</span> zur Auswahl steht, solltest du es auswählen. Im Grunde
-        genommen ist es aber egal, da wir in der Vorlesung selten mit der Kommandozeile arbeiten werden.
-    </p>
-    <figure>
-        <img src="img/git/installation_2.png" />
-        <figcaption>
-            Auswahl des bevorzugten Editors zur Erfassung der Commit-Nachrichten
-        </figcaption>
-    </figure>
-    <p>
-        Da Git ursprünglich für die Entwicklung des Linux-Kernels entwickelt wurde, enthält die Installation
-        unter Windows eine Vielzahl von Kommandozeilenprogrammen aus der Unix-Welt. Linux- und mac-User haben
-        diese Programme bereits installiert, unter Windows fehlen sie jedoch in der Regel. Die Auswahl im
-        nächsten Schritt solltest daher auf <span class="scr">Use Git from the Windows Command Prompt</span>
-        stehen lassen.
-    </p>
-    <figure>
-        <img src="img/git/installation_3.png" />
-        <figcaption>
-            Auswahl der zu verwendenden Shell
-        </figcaption>
-    </figure>
-    <p>
-        Die nachfolgenden Fragen kannst du ebenfalls alle überspringen. Übernimm einfach die Voreinstellungen
-        und klicke dich solange durch, bis die Installation beginnt.
-    </p>
-    <figure>
-        <img src="img/git/installation_4.png" />
-        <figcaption>
-            Ab jetzt heißt es Warten …
-        </figcaption>
-    </figure>
-
-    <p>
-        <span class="nr">3)</span>
-        Um die Installation zu testen, öffne ein Konsolenfenster. Am einfachsten geht dies über das Startmenü,
-        indem du dort den Befehl <span class="cmd">cmd</span> eintippst und ausführst.
-    </p>
-    <figure>
-        <img src="img/git/test_1.png" style="max-width: 25em;" />
-        <figcaption>
-            Start der Kommandozeile unter Windows
-        </figcaption>
-    </figure>
-    <p>
-        Gib innerhalb des Konsolenfensters den Befehl <span class="cmd">git</span> ein und bestätige ihn mit
-        <kbd>ENTER</kbd>. Wenn alles gut geht, solltest du dann den Hilfetext von Git angezeigt bekommen.
-    </p>
-    <figure>
-        <img src="img/git/test_2.png" />
-        <figcaption>
-            Anzeige des git-Hilfetexts innerhalb der Kommandozeile
-        </figcaption>
-    </figure>
-
-    <p>
-        <span class="nr">4)</span>
-        An dieser Stelle solltest du dann gleich noch deinen Namen und deine E-Mailadresse in der Git-Konfiguration
-        hinterlegen. Somit kann Git die von dir vorgenommenen Änderungen an einem Quellcode auch wirklich dir zuordnen.
-        Gib daher folgende Befehle ein, wobei du <span class="scr">Max Mustermann</span> natürlich ersetzen musst:
-    </p>
-    <p class="cmd">
-        git config --global user.email "max@mustermann.de" <br />
-        git config --global user.name "Max Mustermann"
-    </p>
-    <p>
-        <b>Hinweis für mac-User:</b> Sollte an dieser Stelle die Fehlermeldung <span class="scr">Invalid active
-        developer path</span> erscheinen, musst du die
-        <a href="http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/" target="_blank">Kommandozeilenwerkzeuge von Xcode installieren</a>.
-        Gib hierfür einfach folgenden Befehl ein und klicke die Installation durch:
-    </p>
-    <p class="cmd">
-        xcode-select --install
-    </p>
-    <p>
-        Danach kannst du die Befehle zur Einrichtung von Git erneut versuchen:
-    </p>
-    <p class="cmd">
-        git config --global user.email "max@mustermann.de" <br />
-        git config --global user.name "Max Mustermann"
-    </p>
-
-    <p>
-        <span class="nr">5)</span>
-        Zum Schluss generieren wir noch die SSH-Schlüssel, mit denen du dich ohne Kennworteingabe später bei GitHub
-        authentifizieren kannst. Öffne hierfür das Startmenü und wähle folgenden Eintrag aus: <span class="scr">Git</span>
-        → <span class="scr">Git Bash</span>. Dadurch öffnet sich ein Konsolenfenster mit einer UNIX-artigen Konsole.
-        Dort musst du dann folgende Befehle eingeben, wobei du <span class="cmd">schulmeist</span> natürlich durch deinen
-        eigenen Anmeldenamen ersetzen musst. Diesen siehst du in der ersten Zeile vor dem <span class="scr">@</span>-Zeichen:
-    </p>
-    <p class="cmd">
-        mkdir "/c/Users/schulmeist/.ssh" <br />
-        ssh-keygen
-    </p>
-    <p>
-        Wenn <span class="cmd">ssh-keygen</span> nach dem Ablageort der neuen Schlüsseldatei fragt, gib dementsprechend
-        <span class="fn">"/c/Users/dein-benutzername/.ssh/id_rsa"</span> ein. Die anderen Fragen kannst mit <kbd>ENTER</kbd>
-        einfach bestätigen. Achte bei allen Eingaben aber auf die exakte Schreibweise!
-    </p>
-    <figure>
-        <img src="img/git/ssh.png" />
-        <figcaption>
-            Generieren des SSH-Schlüsselpaars für die sichere Authentifizierung bei GitHub
-        </figcaption>
-    </figure>
-    <p>
-        Anschließend kannst du das Fenster mit <span class="cmd">exit</span> beenden.
     </p>
 </section>
 
@@ -391,58 +236,4 @@
             Weitere Einstellungen für Atom
         </figcaption>
     </figure>
-</section>
-
-<!-- ––––––––––––––––––––––––––––––– -->
-<!-- Einrichtung eines GitHub-Kontos -->
-<!-- ––––––––––––––––––––––––––––––– -->
-<section id="sec-github" data-title="Einrichtung eines GitHub-Kontos">
-    <p>
-        <span class="nr">1)</span>
-        Besuche die Seite <a href="https://github.com" target="_blank">https://github.com</a> und eröffne ein neues Konto.
-    </p>
-    <figure>
-        <img src="img/github/signup.png" />
-        <figcaption>
-            Eröffnung eines neuen GitHub-Accounts
-        </figcaption>
-    </figure>
-
-    <p>
-        <span class="nr">2)</span>
-        Logge dich auf GitHub ein und klicke oben rechts auf deinen Avatar. Anschließend wähle den Menüeintrag
-        <span class="scr">Settings</span> aus.
-    </p>
-    <figure>
-        <img src="img/github/settings-menu.png" />
-        <figcaption>
-            Aufruf der Einstellungen in GitHub
-        </figcaption>
-    </figure>
-
-    <p>
-        <span class="nr">3)</span>
-        In den Einstellungen kannst du verschiedene Informationen über dich hinterlegen. Eine kurze Biographie,
-        ein Link auf deine Webseite sowie ein Foto wären nicht schlecht. Mindestens solltest du aber deinen
-        SSH-Schlüssel hinterlegen, damit du beim Programmieren nicht ständig deine Zugangsdaten eintippen musst.
-        Klicke daher links auf <span class="scr">SSH and GPG keys</span>.
-    </p>
-
-    <p>
-        <span class="nr">4)</span>
-        Klicke nun oben rechts auf <span class="scr">New SSH key</span>. In der darauf folgenden Seite kannst du
-        dem Schlüssel einen Namen geben (typischerweise der Name des Computers, zu dem er gehört). In das Feld
-        <span class="scr">Key</span> musst du den Inhalt der Datei <span class="fn">c:\Benutzer\dein-benutzer\.ssh\id_rsa.pub</span>
-        einfügen. Unter Linux und macOS heißt die Datei <span class="fn">~/.ssh/id/id_rsa.pub</span>.
-    </p>
-    <figure>
-        <img src="img/github/ssh-key.png" />
-        <figcaption>
-            Copy & Paste deines öffentlichen SSH-Schlüssels nach GitHub
-        </figcaption>
-    </figure>
-
-    <p>
-        Klicke anschließend auf <span class="scr">Add SSH key</span>, um den neuen Schlüssel zu speichern.
-    </p>
 </section>
