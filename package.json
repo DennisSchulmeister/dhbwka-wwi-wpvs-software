@@ -35,6 +35,7 @@
         "shelljs": "^0.7.8"
     },
     "dependencies": {
-        "highlight.js": "^10.5.0"
+        "highlight.js": "^10.5.0",
+        "is-obj": "^2.0.0"
     }
 }
