@@ -15,14 +15,22 @@
     </p>
     <ul>
         <li>
-            node.js
+            Atom
         </li>
         <li>
-            Atom
+            node.js
         </li>
     </ul>
     <p>
         Die Programme haben dabei folgende Funktion:
+    </p>
+
+    <h3>Atom</h3>
+    <p>
+        Microsoft und Apple sind leider bekannt dafür, ihren Betriebssystemen nicht einmal
+        einen auch nur ansatzweise für Programmierer geeigneten Editor beizulegen. In der
+        Vorlesung verwenden wir deshalb Atom, der von den Machern von GitHub speziell für
+        Webentwickler angeboten wird und sich entsprechend großer Beliebtheit erfreut.
     </p>
 
     <h3>node.js</h3>
@@ -33,14 +41,6 @@
         heutzutage auch im Frontend-Bereich, um fremde JavaScript-Bibliotheken in ihre
         Anwendungen zu integrieren und Hilfsprogramme zur Bearbeitung des Quellcodes
         auszuführen.
-    </p>
-
-    <h3>Atom</h3>
-    <p>
-        Microsoft und Apple sind leider bekannt dafür, ihren Betriebssystemen nicht einmal
-        einen auch nur ansatzweise für Programmierer geeigneten Editor beizulegen. In der
-        Vorlesung verwenden wir deshalb Atom, der von den Machern von GitHub speziell für
-        Webentwickler angeboten wird und sich entsprechend großer Beliebtheit erfreut.
     </p>
 </section>
 
@@ -70,69 +70,6 @@
     </figure>
     <p>
         Verzeichnis angelegt? Alles klar! Dann kann es jetzt los gehen.
-    </p>
-</section>
-
-<!-- –––––––––––––––––––––––– -->
-<!-- Installation von node.js -->
-<!-- –––––––––––––––––––––––– -->
-<section id="sec-nodejs" data-title="Installation von node.js">
-    <p>
-        <span class="nr">1)</span>
-        Besuche die Webseite <a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a>
-        und lade dir das Installationspaket für dein Betriebssystem herunter.
-    </p>
-    <figure>
-        <img src="img/nodejs/download.png" />
-        <figcaption>
-            Downlaod von node.js
-        </figcaption>
-    </figure>
-
-    <p>
-        <span class="nr">2)</span>
-        Unter Windows heißt die Installationsdatei <span class="fn">node-v8.11.4-x64.msi</span>,
-        wobei <span class="fn">8.11.4</span> die Versionsnummer ist und deshalb bei dir abweichen kann.
-        Führe die Datei aus, um die Installation zu starten. Die Fragen des Installationsassistenten
-        kannst du einfach durchklicken. Die Voreinstellungen sind alle in Ordnung.
-    </p>
-    <figure>
-        <img src="img/nodejs/installation.png" />
-        <figcaption>
-            Installation von node.js
-        </figcaption>
-    </figure>
-
-    <p>
-        <span class="nr">3)</span>
-        Zum Testen der Installation öffnest du am Besten eine Kommandozeile. Dies geht ganz einfach im Startmenü,
-        indem du den Befehl <span class="cmd">cmd</span> eintippst und ausführst.
-    </p>
-    <figure>
-        <img src="img/nodejs/test_1.png" style="max-width: 25em;" />
-        <figcaption>
-            Start der Kommandozeile unter Windows
-        </figcaption>
-    </figure>
-    <p>
-        Gib dann den Befehl <span class="cmd">npm</span> ein und bestätige ihn mit <kbd>ENTER</kbd>.
-        Wenn alles gut geht, solltest du folgenden Hilfetext sehen:
-    </p>
-    <figure>
-        <img src="img/nodejs/test_2.png" />
-        <figcaption>
-            Anzeige des npm-Hilfetexts innerhalb der Kommandozeile
-        </figcaption>
-    </figure>
-
-    <p>
-        <span class="nr">4)</span>
-        Sollte dabei der Hinweis erscheinen, dass bereits eine neuere Version von npm verfügbar ist,
-        kannst du diese mit dem Befehl <span class="cmd">npm install -G npm</span> installieren. Dabei
-        siehst du dann auch gleich den Node Package Manager, wofür die Abkürzung <span class="cmd">npm</span>
-        steht, im Einsatz. Der auf dem Bildschirm angezeigte Befehl <span class="cmd">npm i npm</span>
-        (i ist die Kurzform für install) ist an dieser Stelle ausnahmsweise nicht zu empfehlen, da er die
-        neue Version nicht systemweit installieren würde.
     </p>
 </section>
 
@@ -201,10 +138,16 @@
     </p>
     <ul>
         <li>
-            <span class="scr">git-plus</span>
+            <span class="scr">autoclose-html</span>
         </li>
         <li>
-            <span class="scr">autoclose-html</span>
+            <span class="scr">color-picker</span>
+        </li>
+        <li>
+            <span class="scr">local-web-server</span>
+        </li>
+        <li>
+            <span class="scr">git-plus</span> (optional)
         </li>
     </ul>
     <figure>
@@ -236,4 +179,67 @@
             Weitere Einstellungen für Atom
         </figcaption>
     </figure>
+</section>
+
+<!-- –––––––––––––––––––––––– -->
+<!-- Installation von node.js -->
+<!-- –––––––––––––––––––––––– -->
+<section id="sec-nodejs" data-title="Installation von node.js">
+    <p>
+        <span class="nr">1)</span>
+        Besuche die Webseite <a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a>
+        und lade dir das Installationspaket für dein Betriebssystem herunter.
+    </p>
+    <figure>
+        <img src="img/nodejs/download.png" />
+        <figcaption>
+            Downlaod von node.js
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">2)</span>
+        Unter Windows heißt die Installationsdatei <span class="fn">node-v8.11.4-x64.msi</span>,
+        wobei <span class="fn">8.11.4</span> die Versionsnummer ist und deshalb bei dir abweichen kann.
+        Führe die Datei aus, um die Installation zu starten. Die Fragen des Installationsassistenten
+        kannst du einfach durchklicken. Die Voreinstellungen sind alle in Ordnung.
+    </p>
+    <figure>
+        <img src="img/nodejs/installation.png" />
+        <figcaption>
+            Installation von node.js
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">3)</span>
+        Zum Testen der Installation öffnest du am Besten eine Kommandozeile. Dies geht ganz einfach im Startmenü,
+        indem du den Befehl <span class="cmd">cmd</span> eintippst und ausführst.
+    </p>
+    <figure>
+        <img src="img/nodejs/test_1.png" style="max-width: 25em;" />
+        <figcaption>
+            Start der Kommandozeile unter Windows
+        </figcaption>
+    </figure>
+    <p>
+        Gib dann den Befehl <span class="cmd">npm</span> ein und bestätige ihn mit <kbd>ENTER</kbd>.
+        Wenn alles gut geht, solltest du folgenden Hilfetext sehen:
+    </p>
+    <figure>
+        <img src="img/nodejs/test_2.png" />
+        <figcaption>
+            Anzeige des npm-Hilfetexts innerhalb der Kommandozeile
+        </figcaption>
+    </figure>
+
+    <p>
+        <span class="nr">4)</span>
+        Sollte dabei der Hinweis erscheinen, dass bereits eine neuere Version von npm verfügbar ist,
+        kannst du diese mit dem Befehl <span class="cmd">npm install -G npm</span> installieren. Dabei
+        siehst du dann auch gleich den Node Package Manager, wofür die Abkürzung <span class="cmd">npm</span>
+        steht, im Einsatz. Der auf dem Bildschirm angezeigte Befehl <span class="cmd">npm i npm</span>
+        (i ist die Kurzform für install) ist an dieser Stelle ausnahmsweise nicht zu empfehlen, da er die
+        neue Version nicht systemweit installieren würde.
+    </p>
 </section>
